@@ -34,9 +34,9 @@ function entrar() {
     }
 
     if(validacaoLogin) {
-        alert('Login realizado com sucesso')
+        alert('Login realizado com sucesso');
     } else {
-        alert('Alguma informação está incorreta')
+        alert('Alguma informação está incorreta');
     };
 
 }
