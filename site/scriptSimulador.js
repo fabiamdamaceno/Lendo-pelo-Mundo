@@ -36,7 +36,7 @@ function calcular(tempo) {
         Você levou ${sec} segundos para ler 100 palavras. <br>
         Logo, sua velocidade de leitura é de ${velocidade} Palavras por Minuto (PPM). <br>
         <br>
-        Lendo apenas 15 minutos por dia, você leria ${livrosAno} livros num ano. <br>
+        Lendo apenas 15 minutos por dia, você leria ${parseInt(livrosAno, 0)} livros num ano. <br>
         <br>
         Ou seja, você poderia: <br>
         Conhecer ${parseInt(livrosAno, 0)} novas culturas; <br>
