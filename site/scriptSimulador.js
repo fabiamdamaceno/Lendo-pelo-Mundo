@@ -40,7 +40,7 @@ function calcular(tempo) {
         <br>
         Ou seja, você poderia: <br>
         Conhecer ${parseInt(livrosAno, 0)} novas culturas; <br>
-        Se tornar especialista em ${(parseInt(livrosAno / 3))} novos assuntos (The Three Rule Book); <br>
+        Se tornar especialista em ${(parseInt(livrosAno / 3))} novos assuntos (The Three Book Rule); <br>
         Ler ${porcUsuario.toFixed(2)}% a mais que o brasileiro médio. <br>
         <br>
     `;
