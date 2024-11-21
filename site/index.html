@@ -105,8 +105,12 @@
                     <h2>Pesquisa</h2>
                 </div>
                 <div class="graficos">
-                    <div class="grafico">1</div>
-                    <div class="grafico">2</div>
+                    <div class="grafico">
+                        <canvas id="myChart1"></canvas>
+                    </div>
+                    <div class="grafico">
+                        <canvas id="myChart2"></canvas>
+                    </div>
                 </div>
                 <div class="explicacao">
                     <p>
@@ -207,3 +211,79 @@
 </body>
 
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx1 = document.getElementById('myChart1');
+    const ctx2 = document.getElementById('myChart2');
+
+    var qtdLivros = ['0', '1', '2 - 4', '5 - 9', '10 ou mais'];
+    var qtdPessoas = [12, 19, 3, 5, 2, 3];
+
+    var autorGenero = ['Homens', 'Mulheres'];
+    var generoLivros = [15, 25];
+
+    new Chart(ctx2, {
+        type: 'pie',
+        data: {
+            labels: autorGenero,
+            datasets: [{
+                label: 'Livros Lidos em 2023 (pessoas / quantidade de livros)',
+                data: generoLivros,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Autores lidos por gênero'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: qtdLivros,
+            datasets: [{
+                label: 'Quantidade de pessoas',
+                data: qtdPessoas,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Leitura em 2023'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Quantidade de Pessoas'
+                    }
+                },
+                x: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Quantidade de livros'
+                    }
+                }
+            }
+        }
+    });
+
+
+</script>
