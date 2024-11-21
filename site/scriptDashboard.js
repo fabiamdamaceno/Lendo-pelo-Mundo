@@ -1,0 +1,1 @@
+// abrirAdicionarLeitura() - função a ser definida

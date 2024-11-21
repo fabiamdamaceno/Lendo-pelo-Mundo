@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="styleInterno.css">
+    <link rel="stylesheet" href="styleDashboard.css">
+
+    <script src="scriptDashboard.js"></script>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="menuLateral">
+            <div class="logo">
+                <!-- <img src="imgs/biblioteca.jpg"> -->
+            </div>
+            <div class="nav">
+                <a>Leituras</a>
+                <a>Dashboard</a>
+                <a>Simulador</a>
+                <a>Home</a>
+            </div>
+        </div>
+
+        <div class="painel">
+            <div class="leituras">
+                <div class="header">
+                    <div class="titulo">
+                        <h1>Leituras</h1>
+                    </div>
+                    <div class="adicionarLeitura">
+                        <button onclick="abrirAdicionarLeitura()">Adicionar Leitura</button>
+                    </div>
+                </div>
+
+                <div class="lista">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Tipo</th>
+                                <th>Horas</th>
+                                <th>Dia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>01</th>
+                                <th>Insuficiente</th>
+                                <th>14</th>
+                                <th>20/09/24</th>
+                            </tr>
+                            <tr>
+                                <th>02</th>
+                                <th>Excesso</th>
+                                <th>18</th>
+                                <th>22/09/24</th>
+                            </tr>
+                            <tr>
+                                <th>03</th>
+                                <th>Insuficiente</th>
+                                <th>14.5</th>
+                                <th>24/10/24</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
