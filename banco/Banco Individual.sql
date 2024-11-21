@@ -6,11 +6,12 @@ CREATE TABLE usuario (
 		CONSTRAINT chkGenero CHECK (genero IN ('masculino', 'feminino', 'outros')),
     email VARCHAR(45) NOT NULL,
 		CONSTRAINT chkEmail CHECK (email LIKE '%@%'),
-    senha VARCHAR(45) NOT NULL
+    senha VARCHAR(45) NOT NULL,
+    metaAnual INT
 );
 
-INSERT INTO usuario (nome, sobrenome, genero, email, senha) VALUES
-	('Fábiam', 'Damaceno da Silva', 'masculino', 'fabiam.damaceno@gmail.com', MD5('L@pis123'));
+INSERT INTO usuario (nome, sobrenome, genero, email, senha, metaAnual) VALUES
+	('Fábiam', 'Damaceno da Silva', 'masculino', 'fabiam.damaceno@gmail.com', MD5('L@pis123'), 12);
     
 CREATE TABLE leitura (
 	idLeituraUsuario INT PRIMARY KEY AUTO_INCREMENT,
