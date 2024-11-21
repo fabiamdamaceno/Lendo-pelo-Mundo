@@ -1,3 +1,6 @@
+CREATE DATABASE lendoMundo;
+USE lendoMundo;
+-- drop database lendoMundo;
 CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45),
@@ -18,12 +21,13 @@ CREATE TABLE leitura (
     fkLeituraUsuario_Usuario INT,
 		CONSTRAINT fkReLeituraUsuario_Usuario
 		FOREIGN KEY (fkLeituraUsuario_Usuario)
-        REFERENCES idUsuario(usuario),
+        REFERENCES Usuario(idUsuario),
 	titulo VARCHAR(100),
     autor VARCHAR(45),
     paisAutor VARCHAR(45),
     genero VARCHAR(45),
     rating DECIMAL(4,2),
+    dataLeitura DATE DEFAULT (CURRENT_DATE),
     citacaoPreferida VARCHAR(300)
 );
     
@@ -39,5 +43,5 @@ CREATE TABLE livro (
     descricao VARCHAR(300)
 );
 
-INSERT INTO leitura (titulo, autor, paisAutor, genero, descricao, citacaoPreferida) VALUES
+INSERT INTO livro (titulo, autor, paisAutor, genero, descricao) VALUES
 	('Os Irmãos Karamazov', 'Fyodor Dostoevsky', 'Rússia', 'Romance', 'Os Irmãos Karamazov é um romance de Fiódor Dostoiévski, escrito em 1879, uma das mais importantes obras das literaturas russa e mundial, ou, conforme afirmou Freud: "a maior obra da história".');
