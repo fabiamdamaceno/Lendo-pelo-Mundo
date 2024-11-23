@@ -6,19 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leituras</title>
 
-    <link rel="stylesheet" href="styleInterno.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleLeituras.css">
-
-    <script src="scriptLeituras.js"></script>
 </head>
 
 <body>
 
+    <header>
+        <div class="logo">
+            <img src="imgs/biblioteca.jpg">
+        </div>
+        <nav class="pags">
+            <a>Home</a>
+            <a>Mapa</a>
+            <a>Simulador</a>
+            <a>Perfil</a>
+            <!-- Opção para caso haja tradução da página -->
+            <!-- <select>
+                <option>PT</option>
+                <option>EN</option>
+                <option>ES</option>
+            </select> -->
+        </nav>
+        <nav class="sign">
+            <a>Entrar</a>
+            <a>Cadastrar</a>
+        </nav>
+    </header>
+
     <main>
 
-        <div class="menuLateral">
+        <!-- Menu Lateral, mas será usado apenas Header -->
+        <!-- <div class="menuLateral">
             <div class="logo">
-                <!-- <img src="imgs/biblioteca.jpg"> -->
             </div>
             <div class="nav">
                 <a>Leituras</a>
@@ -26,65 +46,47 @@
                 <a>Simulador</a>
                 <a>Home</a>
             </div>
-        </div>
+        </div> -->
 
-        <div class="painel">
-            <div class="leituras">
-                <div class="header">
-                    <div class="titulo">
-                        <h1>Leituras</h1>
+            <div class="painel">
+                <div id="leituras" class="leituras">
+                    <div class="header">
+                        <div class="titulo">
+                            <h1>Leituras</h1>
+                        </div>
+                        <div class="adicionarLeitura">
+                            <button onclick="abrirAdicionarLeitura()">Adicionar Leitura</button>
+                        </div>
                     </div>
-                    <div class="adicionarLeitura">
-                        <button onclick="abrirAdicionarLeitura()">Adicionar Leitura</button>
+
+                    <div class="lista">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Título</th>
+                                    <th>Autor</th>
+                                    <th>País de Origem</th>
+                                    <th>Gênero Literário</th>
+                                    <th>Data da Leitura</th>
+                                    <th>Citação Preferida</th>
+                                </tr>
+                            </thead>
+                            <tbody id="painelLeituras">
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
-                <div class="lista">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Título</th>
-                                <th>Autor</th>
-                                <th>País de Origem</th>
-                                <th>Gênero Literário</th>
-                                <th>Data da Leitura</th>
-                                <th>Citação Preferida</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>01</th>
-                                <th>Os Irmãos Karamazov</th>
-                                <th>Fyodor Dostoevsky</th>
-                                <th>Romance</th>
-                                <th>06/08/2024</th>
-                                <th><button onclick="verCitacao(1)">Ver</button> </th>
-                            </tr>
-                            <tr>
-                                <th>01</th>
-                                <th>Os Irmãos Karamazov</th>
-                                <th>Fyodor Dostoevsky</th>
-                                <th>Romance</th>
-                                <th>06/08/2024</th>
-                                <th><button onclick="verCitacao(1)">Ver</button> </th>
-                            </tr>
-                            <tr>
-                                <th>01</th>
-                                <th>Os Irmãos Karamazov</th>
-                                <th>Fyodor Dostoevsky</th>
-                                <th>Romance</th>
-                                <th>06/08/2024</th>
-                                <th><button onclick="verCitacao(1)">Ver</button> </th>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div id="adicionarLeitura" style="display: none" class="adicionarLeitura">
+                    Vasco da gama
                 </div>
             </div>
-        </div>
 
     </main>
 
 </body>
 
 </html>
+
+<script src="scriptLeituras.js"></script>
