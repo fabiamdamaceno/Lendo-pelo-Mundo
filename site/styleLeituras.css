@@ -17,6 +17,8 @@ main {
     height: 90vh;
 }
 
+/* Estilização Leituras */
+
 .leituras {
     height: 90vh;
 }
@@ -34,7 +36,7 @@ table {
     height: 90vh;
 }
 
-/* Estização header do Painel */
+/* Estização header do leituras */
 
 .painel .header{
     display: flex;
@@ -60,7 +62,7 @@ table {
 }
 
 
-/* Estilização do corpo do painel */
+/* Estilização do corpo do leituras */
 
 th, td, tr{
     padding: 2px 8px;
@@ -75,4 +77,11 @@ th {
 
 td {
     border: 1px solid #524632;
+}
+
+/* Estilização adicionarLeitura */
+
+.adicionarLeitura {
+    flex-direction: column;
+    width: 80vw;
 }

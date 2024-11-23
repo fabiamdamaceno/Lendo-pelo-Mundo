@@ -49,13 +49,13 @@
         </div> -->
 
             <div class="painel">
-                <div id="leituras" class="leituras">
+                <div id="leituras" style="display: block" class="leituras">
                     <div class="header">
                         <div class="titulo">
                             <h1>Leituras</h1>
                         </div>
                         <div class="adicionarLeitura">
-                            <button onclick="abrirAdicionarLeitura()">Adicionar Leitura</button>
+                            <button onclick="mudarPainel('leituras')">Adicionar Leitura</button>
                         </div>
                     </div>
 
@@ -79,7 +79,14 @@
                 </div>
 
                 <div id="adicionarLeitura" style="display: none" class="adicionarLeitura">
-                    Vasco da gama
+                    Título: <input type="text" id="ipt_titulo">
+                    Rating: <input type="text" id="ipt_rating">
+                    Autor: <input type="text" id="ipt_autor">
+                    País: <input type="text" id="ipt_pais">
+                    Gênero Literário: <input type="text" id="ipt_data">
+                    Data de Leitura: <input type="data" id="ipt_data"> 
+                    Citação Preferida: <input type="text" id="ipt_citacaoPreferida">
+                    <button onclick="mudarPainel('adicionarLeitura')">Adicionar Leitura</button>
                 </div>
             </div>
 

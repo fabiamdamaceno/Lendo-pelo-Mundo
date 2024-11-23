@@ -198,12 +198,19 @@ function verCitacao(ID) {
     alert(leituras[ID].citacao);
 };
 
-function abrirAdicionarLeitura() {
+function mudarPainel(paginaAtual) {
     var leituras = document.getElementById("leituras");
     var adicionarLeitura = document.getElementById("adicionarLeitura");
 
-    leituras.style.display = 'none';
-    adicionarLeitura.style.display = 'flex';
+    if(paginaAtual == 'leituras') {
+        leituras.style.display = 'none';
+        adicionarLeitura.style.display = 'flex';
+    }
+
+    if(paginaAtual == 'adicionarLeitura') {
+        leituras.style.display = 'block';
+        adicionarLeitura.style.display = 'none';
+    }
 }
 
 gerarLeituras();
