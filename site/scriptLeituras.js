@@ -198,6 +198,30 @@ function verCitacao(ID) {
     alert(leituras[ID].citacao);
 };
 
+function adicionarLeitura() {
+    var titulo = ipt_titulo.value;
+    var rating = Number(ipt_rating.value);
+    var autor = ipt_autor.value;
+    var genAutor = ipt_genAutor.value;
+    var pais = ipt_pais.value;
+    var genLiterario = ipt_genLiterario.value;
+    var data = ipt_data.value;
+    var citacaoPreferida = ipt_citacaoPreferida.value;
+
+    alert(`
+            Leitura Adicionada:
+            Título: ${titulo}
+            Rating: ${rating}
+            Autor: ${autor}
+            Genêro do Autor: ${genAutor}
+            País: ${pais}
+            Genêro Literário: ${genLiterario}
+            Data de Leitura: ${data}
+            Citação Preferida: ${citacaoPreferida}
+        `);
+
+};
+
 function mudarPainel(paginaAtual) {
     var leituras = document.getElementById("leituras");
     var adicionarLeitura = document.getElementById("adicionarLeitura");

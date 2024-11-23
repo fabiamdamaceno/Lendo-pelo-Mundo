@@ -81,7 +81,8 @@ td {
 
 /* Estilização adicionarLeitura */
 
-.adicionarLeitura {
+form {
+    display: flex;
     flex-direction: column;
     width: 80vw;
 }

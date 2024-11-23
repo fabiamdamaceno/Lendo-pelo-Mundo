@@ -79,14 +79,18 @@
                 </div>
 
                 <div id="adicionarLeitura" style="display: none" class="adicionarLeitura">
-                    Título: <input type="text" id="ipt_titulo">
-                    Rating: <input type="text" id="ipt_rating">
-                    Autor: <input type="text" id="ipt_autor">
-                    País: <input type="text" id="ipt_pais">
-                    Gênero Literário: <input type="text" id="ipt_data">
-                    Data de Leitura: <input type="data" id="ipt_data"> 
-                    Citação Preferida: <input type="text" id="ipt_citacaoPreferida">
-                    <button onclick="mudarPainel('adicionarLeitura')">Adicionar Leitura</button>
+                    <form>    
+                        Título: <input type="text" id="ipt_titulo">
+                        Rating: <input type="text" id="ipt_rating">
+                        Autor: <input type="text" id="ipt_autor">
+                        Gênero Autor: <input type="text" id="ipt_genAutor">
+                        País: <input type="text" id="ipt_pais">
+                        Gênero Literário: <input type="text" id="ipt_genLiterario">
+                        Data de Leitura: <input type="data" id="ipt_data"> 
+                        Citação Preferida: <input type="text" id="ipt_citacaoPreferida">
+                        <!-- <button onclick="mudarPainel('adicionarLeitura')">Fechar</button> -->
+                        <button onclick="adicionarLeitura()">Adicionar Leitura</button>
+                    </form>
                 </div>
             </div>
 
