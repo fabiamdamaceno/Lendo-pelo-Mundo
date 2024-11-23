@@ -48,51 +48,51 @@
             </div>
         </div> -->
 
-            <div class="painel">
-                <div id="leituras" style="display: block" class="leituras">
-                    <div class="header">
-                        <div class="titulo">
-                            <h1>Leituras</h1>
-                        </div>
-                        <div class="adicionarLeitura">
-                            <button onclick="mudarPainel('leituras')">Adicionar Leitura</button>
-                        </div>
+        <div class="painel">
+            <div id="leituras" style="display: block" class="leituras">
+                <div class="header">
+                    <div class="titulo">
+                        <h1>Leituras</h1>
                     </div>
-
-                    <div class="lista">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Título</th>
-                                    <th>Autor</th>
-                                    <th>País de Origem</th>
-                                    <th>Gênero Literário</th>
-                                    <th>Data da Leitura</th>
-                                    <th>Citação Preferida</th>
-                                </tr>
-                            </thead>
-                            <tbody id="painelLeituras">
-                            </tbody>
-                        </table>
+                    <div class="adicionarLeitura">
+                        <button onclick="mudarPainel('leituras')">Adicionar Leitura</button>
                     </div>
                 </div>
 
-                <div id="adicionarLeitura" style="display: none" class="adicionarLeitura">
-                    <form>    
-                        Título: <input type="text" id="ipt_titulo">
-                        Rating: <input type="text" id="ipt_rating">
-                        Autor: <input type="text" id="ipt_autor">
-                        Gênero Autor: <input type="text" id="ipt_genAutor">
-                        País: <input type="text" id="ipt_pais">
-                        Gênero Literário: <input type="text" id="ipt_genLiterario">
-                        Data de Leitura: <input type="data" id="ipt_data"> 
-                        Citação Preferida: <input type="text" id="ipt_citacaoPreferida">
-                        <!-- <button onclick="mudarPainel('adicionarLeitura')">Fechar</button> -->
-                        <button onclick="adicionarLeitura()">Adicionar Leitura</button>
-                    </form>
+                <div class="lista">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Título</th>
+                                <th>Autor</th>
+                                <th>País de Origem</th>
+                                <th>Gênero Literário</th>
+                                <th>Data da Leitura</th>
+                                <th>Citação Preferida</th>
+                            </tr>
+                        </thead>
+                        <tbody id="painelLeituras">
+                        </tbody>
+                    </table>
                 </div>
             </div>
+
+            <div id="adicionarLeitura" style="display: none" class="adicionarLeitura">
+                <form>
+                    Título: <input type="text" id="ipt_titulo">
+                    Rating: <input type="text" id="ipt_rating">
+                    Autor: <input type="text" id="ipt_autor">
+                    Gênero Autor: <input type="text" id="ipt_genAutor">
+                    País: <input type="text" id="ipt_pais">
+                    Gênero Literário: <input type="text" id="ipt_genLiterario">
+                    Data de Leitura: <input type="data" id="ipt_data">
+                    Citação Preferida: <input type="text" id="ipt_citacaoPreferida">
+                    <!-- <button onclick="mudarPainel('adicionarLeitura')">Fechar</button> -->
+                    <button onclick="adicionarLeitura()">Adicionar Leitura</button>
+                </form>
+            </div>
+        </div>
 
     </main>
 

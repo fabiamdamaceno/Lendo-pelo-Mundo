@@ -6,19 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 
-    <link rel="stylesheet" href="styleInterno.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleDashboard.css">
 
-    <script src="scriptDashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
+    <header>
+        <div class="logo">
+            <img src="imgs/biblioteca.jpg">
+        </div>
+        <nav class="pags">
+            <a>Home</a>
+            <a>Mapa</a>
+            <a>Simulador</a>
+            <a>Perfil</a>
+            <!-- Opção para caso haja tradução da página -->
+            <!-- <select>
+                <option>PT</option>
+                <option>EN</option>
+                <option>ES</option>
+            </select> -->
+        </nav>
+        <nav class="sign">
+            <a>Entrar</a>
+            <a>Cadastrar</a>
+        </nav>
+    </header>
+
     <main>
 
-        <div class="menuLateral">
+        <!-- <div class="menuLateral">
             <div class="logo">
-                <!-- <img src="imgs/biblioteca.jpg"> -->
+                <img src="imgs/biblioteca.jpg">
             </div>
             <div class="nav">
                 <a>Leituras</a>
@@ -26,10 +48,122 @@
                 <a>Simulador</a>
                 <a>Home</a>
             </div>
-        </div>
+        </div> -->
 
-        <div class="painel">
-           
+        <div class="body">
+            <div class="titulo">
+                <h1>Dashboard Leituras</h1>
+            </div>
+            <div class="dash">
+                <div class="lateral">
+                    <div class="kpis">
+                        <div class="kpi">
+                            <span class="texto">
+                                Livros Lidos 2024:
+                            </span>
+                            <span class="dado">
+                                22 livros
+                            </span>
+                        </div>
+                        <div class="kpi">
+                            <span class="texto">
+                                Média de Livros por Mês:
+                            </span>
+                            <span class="dado">
+                                2,2 livros/mês
+                            </span>
+                        </div>
+                        <div class="kpi">
+                            <span class="texto">
+                                Autor Preferido:
+                            </span>
+                            <span class="dado">
+                                Fyodor Dostoevsky
+                            </span>
+                        </div>
+                        <div class="kpi">
+                            <span class="texto">
+                                Gênero Preferido:
+                            </span>
+                            <span class="dado">
+                                Romance
+                            </span>
+                        </div>
+                        <div class="kpi">
+                            <span class="texto">
+                                País Literário Preferido:
+                            </span>
+                            <span class="dado">
+                                Rússia
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="painel">
+
+                        <div class="conquistas">
+                            <div class="header">
+                                <div class="titulo">
+                                    <h1>Conquistas</h1>
+                                </div>
+                            </div>
+
+                            <div class="lista">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nome</th>
+                                            <th>Descrição</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Soviete</td>
+                                        <td>Leia 3 livros russos</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Brazuca</td>
+                                        <td>Leia 3 livros brasileiros</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Rapaz Latino-Americano</td>
+                                        <td>Leia 3 livros espanhois</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Díscipulo do Machado de Assis</td>
+                                        <td>Leia 10 livros brasileiros</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="centro">
+                    <div class="cima">
+                        <div class="grafico">
+                            <canvas id="myChart1"></canvas>
+                        </div>
+                        <div class="grafico">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                    </div>
+                    <div class="baixo">
+                        <div class="grafico">
+                            <canvas id="myChart3"></canvas>
+                        </div>
+                        <div class="grafico">
+                            <canvas id="myChart4"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
@@ -37,3 +171,5 @@
 </body>
 
 </html>
+
+<script src="scriptDashboard.js"></script>
