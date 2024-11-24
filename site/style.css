@@ -22,15 +22,56 @@ section {
 }
 
 .titulo {
-    background-color: #D4AF37;
-    margin-bottom: 8px;
-    padding: 0% 0.5%;
+    background: linear-gradient(to left, #A8862B, #D4AF37,  #D4AF37, #F0D58C);
+
+    margin-bottom: 12px;
+    padding: 0.2% 0.2%;
     border: 8px solid #524632;
+    box-shadow: 3px 2px 5px 1px black;
+    display: flex;
+}
+
+.parafusos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.parafuso {
+    background-color: #D4AF37;
+    width: 12px;
+    height: 12px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 7px;
+    box-shadow: inset 0px 0px 1px 0.25px #3d300a;  
+    border-color: #000000; 
+    
+    color: #A8862B; 
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.parafusoFora {
+    box-shadow: 0px 0px 0.25px 0.125px black;
+    border-radius: 7px;
+    width: 12px;
+    height: 12px;
+}
+
+.parafusoFora1 {
+    align-self: self-start;
+}
+.parafusoFora2 {
+    align-self: self-end;
 }
 
 h2 {
     font-size: 32px;
-    margin: 1vh 0;
+    margin: 1vh 0.5vh;
 }
 
 hr {

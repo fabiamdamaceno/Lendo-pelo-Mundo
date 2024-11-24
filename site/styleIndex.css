@@ -1,6 +1,6 @@
 /* Imagem título */
 .head {
-    background-image: url(imgs/1.webp);
+    background-image: url(imgs/2.jpg);
     width: 100%;
     height: 45vh;
     background-size: cover;
@@ -30,25 +30,61 @@ main .body {
     padding: 0 0.5%;
 }
 
+/* Intervalos */
+.intervalo {
+    background-image: url(imgs/2.jpg);
+    width: 100%;
+    height: 35vh;
+    background-size: cover;
+    
+    box-shadow: inset 0px 0px 8px 2px lightblue;
+}
+
+.intervalo1 {
+    background-position: 0% 31.9%;
+}
+
+.intervalo2 {
+    background-position: 0% 56.1%;
+}
+
+.intervalo3 {
+    background-position: 0% 80.4%;
+}
+
+
 /* Seção - Artigos do Contexto */
 
-.artigos {
-    background-color: #FCFCFC;
-}
+
 
 .artigos .artigo {
     display: flex;
     flex-direction: row;
-    background-color: #524632;
     margin-top: 1%;
+
+    background-color: #FCFCFC;
+    
+}
+
+.artigos .artigo1 {
+    box-shadow: 3px 0px 4px 0.5px black;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.artigos .artigo2 {
+    box-shadow: -3px 0px 4px 0.5px black;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+
 }
 
 
 .artigos .artigo .texto {
     padding: 1%;
-    background-color: gray;
     width: 60%;
     height: 45vh;
+
 }
 
 .artigos .artigo .texto h3 {
@@ -71,7 +107,6 @@ main .body {
 
 .artigos .artigo .imagem {
     padding: 1%;
-    background-color: lightcoral;
     width: 40%;
     height: 45vh;
 
@@ -89,6 +124,10 @@ main .body {
 .livros {
     /* background-color: #524632; */
     width: 100%;
+    background-image: url(imgs/360_F_219711769_oLpPi2eHbyNeyEsk7wT56wMuej7UvJia.jpg);
+    background-size: cover;
+    background-position: 0% 25%;
+
 }
 
 .estante {
@@ -100,7 +139,7 @@ main .body {
     justify-content: space-around;
     align-items: center;
 
-    height: 380px;
+    height: 360px;
     width: 1120px;
 }
 
@@ -112,7 +151,6 @@ main .body {
     align-items: center;
     justify-content: center;
 
-
     box-shadow: inset 10px -6px 5px 10px #816742;
     
     height: 100%;
@@ -121,16 +159,30 @@ main .body {
     padding: 0.5%;
 }
 
+.imgLivro {
+    margin-left: 16px;
+    margin-top: 16px;
+
+    display: flex;
+    justify-content: left;
+
+    height: 320px;
+    width: 218px;
+    background-color: white;
+    box-shadow: 3px 0px 5px 0.25px black;
+    
+
+    border: 0.5px solid black;
+}
+
 .textoLivro {
     font-size: 18px;
     /* background-color: #39A2AE; */
 }
 
 .imgLivro img {
-    margin-left: 16px;
-    height: 320px;
     width: 210px;
-    box-shadow: 2px 2px 5px 1px black;
+    border-right: 1px solid black;
 }
 
 .imgLivro:hover {
