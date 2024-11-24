@@ -7,7 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleIndex.css">
-    
+
     <script src="scriptIndex.js"></script>
 </head>
 
@@ -98,9 +98,46 @@
                     </div>
                 </div>
             </section>
-        
-<hr>
-            
+
+            <hr>
+
+            <section class="livros">
+                <div class="titulo">
+                    <h2>Livros Transformadores</h2>
+                </div>
+                <div class="estante">
+                    <div class="livro">
+                        <div onclick="aparecerTextoLivro(1)" class="imgLivro">
+                            <img src="imgs/dom_quixote.jpg">
+                        </div>
+                    </div>
+                    <div class="livro">
+                        <div onclick="aparecerTextoLivro(2)" class="imgLivro">
+                            <img src="imgs/dom_quixote.jpg">
+                        </div>
+                    </div>
+                    <div class="livro">
+                        <div onclick="aparecerTextoLivro(3)" class="imgLivro">
+                            <img src="imgs/dom_quixote.jpg">
+                        </div>
+                    </div>
+                    <div class="livro">
+                        <div onclick="aparecerTextoLivro(4)" class="imgLivro">
+                            <img src="imgs/dom_quixote.jpg">
+                        </div>
+                        <div class="textoLivro">
+                            <!-- <p>
+                                Esse livro mudou muito a minha vida. Esse livro mudou muito a minha vida. Esse livro mudou muito a minha vida. Esse livro mudou muito a minha vida.
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+                <div id="textoLivro" class="textoLivro cardTexto">
+                </div>
+            </section>
+
+            <hr>
+
             <section class="dados">
                 <div class="titulo">
                     <h2>Pesquisa</h2>
@@ -125,22 +162,22 @@
                 </div>
             </section>
 
-<hr>
+            <hr>
 
             <section class="ODS">
                 <div class="titulo">
                     <h2>Objetivos de Desenvolvimento Sustentável - ONU</h2>
                 </div>
                 <div class="cards">
-                    <div onclick="aparecer(1)" class="card card1">Card1</div>
-                    <div onclick="aparecer(2)" class="card card2">Card2</div>
-                    <div onclick="aparecer(3)" class="card card3">Card3</div>
+                    <div onclick="aparecerCard(1)" class="card card1">Card1</div>
+                    <div onclick="aparecerCard(2)" class="card card2">Card2</div>
+                    <div onclick="aparecerCard(3)" class="card card3">Card3</div>
                 </div>
-                <div id="cardExplicacao" class="cardExplicacao">
+                <div id="cardExplicacao" class="cardTexto">
                 </div>
             </section>
 
-<hr>
+            <hr>
 
             <section class="metas">
                 <div class="titulo">
@@ -151,7 +188,8 @@
                         <div class="texto">
                             <h3>Pessoal</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat repudiandae in doloremque at
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat repudiandae in
+                                doloremque at
                                 recusandae veniam amet ratione laboriosam perferendis, dolorem laborum culpa ad mollitia
                                 magni
                                 quidem nobis sapiente impedit?
@@ -168,7 +206,8 @@
                         <div class="texto">
                             <h3>Social</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat repudiandae in doloremque at
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat repudiandae in
+                                doloremque at
                                 recusandae veniam amet ratione laboriosam perferendis, dolorem laborum culpa ad mollitia
                                 magni
                                 quidem nobis sapiente impedit?

@@ -13,6 +13,8 @@
     color: #FCFCFC;
     font-size: 40px;
     text-shadow: 2px 2px 2px black;
+
+    box-shadow: 0px 0px 8px 2px lightblue;
 }
 
 /* Corpo do Site */
@@ -82,6 +84,59 @@ main .body {
     height: 250px;
 }
 
+/* Seção - Livros Fundamentais */
+
+.livros {
+    /* background-color: #524632; */
+    width: 100%;
+}
+
+.estante {
+    box-shadow: 3px 2px 9px 1px black;
+    background-color: #FCFCFC;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 380px;
+    width: 1120px;
+}
+
+.livro {
+    background-color: #524632;
+    border: 5px solid #AF8751;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    box-shadow: inset 10px -6px 5px 10px #816742;
+    
+    height: 100%;
+    width: 25%;
+
+    padding: 0.5%;
+}
+
+.textoLivro {
+    font-size: 18px;
+    /* background-color: #39A2AE; */
+}
+
+.imgLivro img {
+    margin-left: 16px;
+    height: 320px;
+    width: 210px;
+    box-shadow: 2px 2px 5px 1px black;
+}
+
+.imgLivro:hover {
+    cursor: pointer;
+}
+
 /* Seção - Gráficos Pesquisa */
 
 .dados {
@@ -138,7 +193,7 @@ main .body {
     cursor: pointer;
 }
 
-.ODS .cardExplicacao {
+.cardTexto {
     background-color: #FCFCFC;
     margin: 1% 2%;
     font-size: 20px;

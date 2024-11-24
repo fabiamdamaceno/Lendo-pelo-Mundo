@@ -21,6 +21,13 @@ section {
     padding: 1%;
 }
 
+.titulo {
+    background-color: #D4AF37;
+    margin-bottom: 8px;
+    padding: 0% 0.5%;
+    border: 8px solid #524632;
+}
+
 h2 {
     font-size: 32px;
     margin: 1vh 0;
@@ -43,7 +50,6 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0.5% 2%;
-    box-shadow: 0px 0px 5px 1px gray;
     height: 8.2vh;
 }
 
@@ -130,6 +136,10 @@ footer .criador {
 footer .criador img{
     width: 20px;
     height: 20px;
+}
+
+footer nav a {
+    text-shadow: 1px 1px 1px black;
 }
 
 footer nav span {
