@@ -35,6 +35,7 @@ main .body {
     flex-direction: column;
     align-items: center;
     padding: 0 0.5%;
+    width: 100%;
 }
 
 /* Intervalos */
@@ -201,12 +202,6 @@ main .body {
 .dados {
     background-color: #524632;
     width: 100%;
-}
-
-.dados .titulo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .graficos {
