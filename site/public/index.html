@@ -11,7 +11,7 @@
     <script src="./js/scriptIndex.js"></script>
 </head>
 
-<body>
+<body onload="verificarLogin()">
 
     <header>
         <div class="logo">
@@ -19,13 +19,13 @@
         </div>
         <nav class="pags">
             <a>Home</a>
-            <a>Mapa</a>
+            <a id="a_leituras">Leituras</a>
+            <a id="a_dashboard">Dashboard</a>
             <a>Simulador</a>
-            <a>Perfil</a>
         </nav>
         <nav class="sign">
-            <a href="login.html">Entrar</a>
-            <a href="cadastro.html">Cadastrar</a>
+            <a id="a_login" href="login.html">Entrar</a>
+            <a id="a_cadastrar" href="cadastro.html">Cadastrar</a>
         </nav>
     </header>
 
@@ -112,6 +112,8 @@
             </section>
 
             <section class="livros">
+                <div class="roda rodateto"></div>
+                <div class="parede"></div>
                 <div class="titulo">
                     <div class="parafusos">
                         <div class="parafusoFora parafusoFora1">
@@ -134,36 +136,35 @@
                 <div class="estante">
                     <div class="livro">
                         <div onclick="aparecerTextoLivro(1)" class="imgLivro">
-                            <img src="./assets/imgs/capaDom_Quixote.jpg">
+                            <img src="./assets/imgs/capa_DomQuixote.jpg">
                         </div>
                     </div>
                     <div class="livro">
                         <div onclick="aparecerTextoLivro(2)" class="imgLivro">
-                            <img src="./assets/imgs/capaDom_Quixote.jpg">
+                            <img src="./assets/imgs/capa_CrimeECastigo.jpg">
                         </div>
                     </div>
                     <div class="livro">
                         <div onclick="aparecerTextoLivro(3)" class="imgLivro">
-                            <img src="./assets/imgs/capaDom_Quixote.jpg">
+                            <img src="./assets/imgs/capa_12RegrasParaAVida.jpg">
                         </div>
                     </div>
                     <div class="livro">
                         <div onclick="aparecerTextoLivro(4)" class="imgLivro">
-                            <img src="./assets/imgs/capaDom_Quixote.jpg">
-                        </div>
-                        <div class="textoLivro">
-                            <!-- <p>
-                                Esse livro mudou muito a minha vida. Esse livro mudou muito a minha vida. Esse livro mudou muito a minha vida. Esse livro mudou muito a minha vida.
-                            </p> -->
+                            <img src="./assets/imgs/capa_CartasAprendiz.jpg">
                         </div>
                     </div>
                 </div>
                 <div id="textoLivro" class="textoLivro cardTexto">
+                    <h4 style="text-align: center;">SELECIONE UM LIVRO</h4>
                 </div>
+                <div class="roda rodape"></div>
             </section>
 
         </div>
+
         <div class="intervalo intervalo1"></div>
+
         <div class="body">
 
             <section class="dados">
@@ -196,13 +197,16 @@
                 </div>
                 <div class="explicacao">
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque laborum placeat
-                        voluptatum modi quod natus unde facere minus, odio, aperiam velit aspernatur sequi omnis quia
-                        maxime amet doloribus tempora.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis sed dolores possimus
-                        ipsam asperiores labore temporibus aperiam, quasi quidem quos? Nostrum fugiat, expedita at sunt
-                        minima alias ex harum.
+
                     </p>
+                </div>
+                <div class="textoLivro cardTexto">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque laborum placeat
+                    voluptatum modi quod natus unde facere minus, odio, aperiam velit aspernatur sequi omnis quia
+                    maxime amet doloribus tempora.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis sed dolores possimus
+                    ipsam asperiores labore temporibus aperiam, quasi quidem quos? Nostrum fugiat, expedita at sunt
+                    minima alias ex harum.
                 </div>
             </section>
 

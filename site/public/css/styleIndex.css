@@ -68,7 +68,7 @@ main .body {
 .artigos .artigo {
     display: flex;
     flex-direction: row;
-    margin-top: 1%;
+    margin-top: 2%;
 
     background-color: #FCFCFC;
     
@@ -130,12 +130,31 @@ main .body {
 /* Seção - Livros Fundamentais */
 
 .livros {
-    /* background-color: #524632; */
-    width: 100%;
+    background-color: #C2B280;
+    width: 98.9vw;
+    height: 825px;
+    padding: 0% 1% !important;
+}
+
+.roda {
     background-image: url(../assets/imgs/fundoEstante.jpg);
     background-size: cover;
-    background-position: 0% 25%;
+    
+    width: 98.9vw;
+}
 
+.rodateto {
+    background-position: 0% 9.5%;
+    
+    height: 46.5px;
+    margin-bottom: 1vh;
+}
+
+.rodape {
+    background-position: 0% 88.45%;
+    
+    height: 58px;
+    justify-self: flex-start;
 }
 
 .estante {
@@ -183,11 +202,6 @@ main .body {
     border: 0.5px solid black;
 }
 
-.textoLivro {
-    font-size: 18px;
-    /* background-color: #39A2AE; */
-}
-
 .imgLivro img {
     width: 210px;
     border-right: 1px solid black;
@@ -200,21 +214,29 @@ main .body {
 /* Seção - Gráficos Pesquisa */
 
 .dados {
-    background-color: #524632;
     width: 100%;
 }
 
 .graficos {
-    background-color: aqua;
+    background-color: #FCFCFC;
+    border: 7px solid #AF8751;
+
+    box-shadow: inset 0px 0px 5px 1px black;
+
+    padding: 3% 0.5%;
     display: flex;
     justify-content: space-around;
     width: 90%;
+    height: 500px;
 }
 
-.grafico {
-    background-color: aquamarine;
-    width: 35vw;
-    height: 35vw;
+/* .grafico {
+
+} */
+
+.grafico canva {
+    width: 60vw;
+    height: 60vw !important;
 }
 
 .explicacao p {
@@ -245,13 +267,6 @@ main .body {
 
 .ODS .card:hover{
     cursor: pointer;
-}
-
-.cardTexto {
-    background-color: #FCFCFC;
-    margin: 1% 2%;
-    font-size: 20px;
-    text-align: justify;
 }
 
 /* Seção Objetivos */
