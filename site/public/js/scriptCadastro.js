@@ -191,6 +191,7 @@ function cadastrarBanco() {
     var sobrenomeInputado = ipt_sobrenome.value;
     var emailInputado = ipt_email.value;
     var senhaInputado = ipt_senha.value;
+    var generoInputado = ipt_genero.value;
 
     var nome = nomeInputado;
     var sobrenome = sobrenomeInputado;
@@ -205,11 +206,13 @@ function cadastrarBanco() {
 
     var nomeBanco = nome.replace(`${nome1Caractere}`, `${nome1CaractereMaisculo}`);
     var sobrenomeBanco = sobrenome.replace(`${sobrenome1Caractere}`, `${sobrenome1CaractereMaisculo}`);
+    var generoBanco = generoInputado;
     var emailBanco = emailInputado;
     var senhaBanco = senhaInputado;
 
     console.log(nomeBanco);
     console.log(sobrenomeBanco);
+    console.log(generoBanco);
     console.log(emailBanco);
     console.log(senhaBanco);
 
@@ -221,6 +224,7 @@ function cadastrarBanco() {
         body: JSON.stringify({
             nomeServer: nomeBanco,
             sobrenomeServer: sobrenomeBanco, 
+            generoServer :generoBanco,
             emailServer: emailBanco,
             senhaServer: senhaBanco
         }),

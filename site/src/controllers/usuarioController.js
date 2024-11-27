@@ -55,6 +55,7 @@ function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
     var sobrenome = req.body.sobrenomeServer;
+    var genero = req.body.generoServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
 
@@ -63,6 +64,8 @@ function cadastrar(req, res) {
         res.status(400).send("Seu nome está indefinido!");
     } else if (sobrenome == undefined) {
         res.status(400).send("Seu sobrenome está indefinido!");
+    } else if (genero == undefined) {
+        res.status(400).send("Seu gênero está indefinido!");
     } else if (email == undefined) {
         res.status(400).send("Sua email está indefinido!");
     } else if (senha == undefined) {
@@ -70,7 +73,7 @@ function cadastrar(req, res) {
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha, sobrenome)
+        usuarioModel.cadastrar(nome, sobrenome, genero, email, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);

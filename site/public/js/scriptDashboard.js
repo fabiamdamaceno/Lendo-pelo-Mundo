@@ -9,6 +9,15 @@ var qtdPessoas = [12, 19, 3, 5, 2, 3];
 var c1_mes = ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
 var c1_livrosMes = [1, 3, 4, 1, 2, 1, 2, 1, 2, 1, 2, 4]
 
+var c2_generoAutor = ['Homem', 'Mulher'];
+var c2_autorGeneroLivros = [12, 4];
+
+var c3_paises = ['Estados Unidos', 'Rússia', 'Inglaterra'];
+var c3_livrosPais = [3, 8, 2, 12];
+
+var c4_generoLiterario = ['Fantasia', 'Romance', 'Suspense', 'Técnico', 'Humanidades'];
+var c4_livroGeneroLiterario = [3, 7, 1, 2, 3];
+
 new Chart(ctx1, {
     type: 'bar',
     data: {
@@ -46,12 +55,12 @@ new Chart(ctx1, {
 });
 
 new Chart(ctx2, {
-    type: 'bar',
+    type: 'pie',
     data: {
-        labels: qtdLivros,
+        labels: c2_generoAutor,
         datasets: [{
-            label: 'Quantidade de pessoas',
-            data: qtdPessoas,
+            label: 'Livros Lidos',
+            data: c2_autorGeneroLivros,
             borderWidth: 1
         }]
     },
@@ -59,35 +68,19 @@ new Chart(ctx2, {
         plugins: {
             title: {
                 display: true,
-                text: 'Leitura em 2023'
+                text: 'Gênero dos Autores Lidos'
             }
         },
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'Quantidade de Pessoas'
-                }
-            },
-            x: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'Quantidade de livros'
-                }
-            }
-        }
     }
 });
 
 new Chart(ctx3, {
     type: 'bar',
     data: {
-        labels: qtdLivros,
+        labels: c3_paises,
         datasets: [{
             label: 'Quantidade de pessoas',
-            data: qtdPessoas,
+            data: c3_livrosPais,
             borderWidth: 1
         }]
     },
@@ -118,36 +111,63 @@ new Chart(ctx3, {
 });
 
 new Chart(ctx4, {
-    type: 'bar',
+    // const config = {
+    //     type: 'radar',
+    //     data: data,
+    //     options: {
+    //       elements: {
+    //         line: {
+    //           borderWidth: 3
+    //         }
+    //       }
+    //     },
+    //   };
+    //   const data = {
+    //     labels: [
+    //       'Eating',
+    //       'Drinking',
+    //       'Sleeping',
+    //       'Designing',
+    //       'Coding',
+    //       'Cycling',
+    //       'Running'
+    //     ],
+    //     datasets: [{
+    //       label: 'My First Dataset',
+    //       data: [65, 59, 90, 81, 56, 55, 40],
+    //       fill: true,
+    //       backgroundColor: 'rgba(255, 99, 132, 0.2)',
+    //       borderColor: 'rgb(255, 99, 132)',
+    //       pointBackgroundColor: 'rgb(255, 99, 132)',
+    //       pointBorderColor: '#fff',
+    //       pointHoverBackgroundColor: '#fff',
+    //       pointHoverBorderColor: 'rgb(255, 99, 132)'
+    //     }, {
+    //       label: 'My Second Dataset',
+    //       data: [28, 48, 40, 19, 96, 27, 100],
+    //       fill: true,
+    //       backgroundColor: 'rgba(54, 162, 235, 0.2)',
+    //       borderColor: 'rgb(54, 162, 235)',
+    //       pointBackgroundColor: 'rgb(54, 162, 235)',
+    //       pointBorderColor: '#fff',
+    //       pointHoverBackgroundColor: '#fff',
+    //       pointHoverBorderColor: 'rgb(54, 162, 235)'
+    //     }]
+    //   };
+    type: 'radar',
     data: {
-        labels: qtdLivros,
+        labels: c4_generoLiterario,
         datasets: [{
-            label: 'Quantidade de pessoas',
-            data: qtdPessoas,
-            borderWidth: 1
+            label: 'Livros por Gênero',
+            data: c4_livroGeneroLiterario,
+            borderWidth: 2
         }]
     },
     options: {
         plugins: {
             title: {
                 display: true,
-                text: 'Leitura em 2023'
-            }
-        },
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'Quantidade de Pessoas'
-                }
-            },
-            x: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'Quantidade de livros'
-                }
+                text: 'Perfil do Leitor'
             }
         }
     }

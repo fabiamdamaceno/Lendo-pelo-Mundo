@@ -22,6 +22,16 @@ main {
 
 .centro {
     display: flex;
+    flex-direction: column;
+}
+
+.centro div {
+    display: flex;
+    flex-direction: row;
+}
+
+canvas {
+    width: 30vw;
 }
 
 /* Estilização Leituras */
