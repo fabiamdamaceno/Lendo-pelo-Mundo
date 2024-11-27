@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leituras</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styleLeituras.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./assets/imgs/fotoRascunho.jpg">
+        </div>
+        <nav class="pags">
+            <a>Home</a>
+            <a>Mapa</a>
+            <a>Simulador</a>
+            <a>Perfil</a>
+        </nav>
+        <nav class="sign">
+            <a>Entrar</a>
+            <a>Cadastrar</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="painel">
+            <div id="leituras" style="display: block" class="leituras">
+                <div class="header">
+                    <div class="titulo">
+                        <h1>Leituras</h1>
+                    </div>
+                    <div class="adicionarLeitura">
+                        <button onclick="mudarPainel('leituras')">Adicionar Leitura</button>
+                    </div>
+                </div>
+
+                <div class="lista">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Título</th>
+                                <th>Autor</th>
+                                <th>País de Origem</th>
+                                <th>Gênero Literário</th>
+                                <th>Data da Leitura</th>
+                                <th>Citação Preferida</th>
+                            </tr>
+                        </thead>
+                        <tbody id="painelLeituras">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="adicionarLeitura" style="display: none" class="adicionarLeitura">
+                <form>
+                    Título: <input type="text" id="ipt_titulo">
+                    Rating: <input type="text" id="ipt_rating">
+                    Autor: <input type="text" id="ipt_autor">
+                    Gênero Autor: <input type="text" id="ipt_genAutor">
+                    País: <input type="text" id="ipt_pais">
+                    Gênero Literário: <input type="text" id="ipt_genLiterario">
+                    Data de Leitura: <input type="data" id="ipt_data">
+                    Citação Preferida: <input type="text" id="ipt_citacaoPreferida">
+                    <button onclick="adicionarLeitura()">Adicionar Leitura</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
+
+<script src="./js/scriptLeituras.js"></script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styleCadastro.css">
+
+    <script src="./js/scriptCadastro.js"></script>
+</head>
+
+<body>
+
+    Nome:
+    <input placeholder="Nome" oninput="validarNome()" type="text" id="ipt_nome"> <br>
+    <div id="div_msgNome"><br></div>
+
+    Sobrenome:
+    <input placeholder="Sobrenome" oninput="validarSobrenome()" type="text" id="ipt_sobrenome"> <br>
+    <div id="div_msgSobrenome"><br></div>
+
+    Email:
+    <input placeholder="exemplo@dominio.com" oninput="validarEmail()" type="text" id="ipt_email"> <br>
+    <div id="div_msgEmail"><br></div>
+
+    Senha:
+    <input placeholder="********"  oninput="validarSenha()" type="password" id="ipt_senha">
+    <button id="btn_senha" onclick="visualizarSenha()">👁️</button>
+    <br>
+    <div id="div_msgSenha"><br><br><br><br><br><br></div>
+
+    Confirmar Senha:
+    <input placeholder="********" oninput="validarConfirmarSenha()" type="password" id="ipt_confirmarSenha"> <br>
+    <div id="div_msgConfirmarSenha"><br></div>
+
+    <br>
+
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <div id="div_aviso" style="display: none"></div> <br>
+
+</body>
+
+</html>

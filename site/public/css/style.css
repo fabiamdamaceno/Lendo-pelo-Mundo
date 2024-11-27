@@ -1,0 +1,208 @@
+/* Resetando estilizações padrões do HTML */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Caslon Text', 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: black;
+}
+
+/* Configurações gerais */
+
+a:hover,
+button:hover {
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+    padding: 1%;
+}
+
+.titulo {
+    background: linear-gradient(to left, #A8862B, #D4AF37,  #D4AF37, #F0D58C);
+
+    margin-bottom: 12px;
+    padding: 0.2% 0.2%;
+    border: 8px solid #524632;
+    box-shadow: 3px 2px 5px 1px black;
+    display: flex;
+}
+
+.parafusos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.parafuso {
+    background-color: #D4AF37;
+    width: 12px;
+    height: 12px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 7px;
+    box-shadow: inset 0px 0px 1px 0.25px #3d300a;  
+    border-color: #000000; 
+    
+    color: #A8862B; 
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.parafusoFora {
+    box-shadow: 0px 0px 0.25px 0.125px black;
+    border-radius: 7px;
+    width: 12px;
+    height: 12px;
+}
+
+.parafusoFora1 {
+    align-self: self-start;
+}
+.parafusoFora2 {
+    align-self: self-end;
+}
+
+h2 {
+    font-size: 32px;
+    margin: 1vh 0.5vh;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    width: 101%;
+    background-color: #ec0505;
+    margin: 20px 0;
+}
+
+/* Estilização do Header */
+
+header {
+    background-color: #524632;
+    color: #FCFCFC;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5% 2%;
+    height: 8.2vh;
+}
+
+header .logo {
+    width: 10vw;
+}
+
+header .logo img {
+    width: 42px;
+    height: 42px;
+
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .pags {
+    width: 30vw;
+}
+
+header .sign {
+    width: 10vw;
+}
+
+header nav a {
+    margin: 0 6%;
+    width: max-content;
+    font-size: 16px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px black;
+    color: white;
+}
+
+/* Estilização Main */
+
+main {
+    min-height: 83.6vh;
+    background-color: #FFFAE3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização Footer */
+
+footer {
+    background-color: #524632;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5% 2%;
+    box-shadow: 0px 0px 5px 1px gray;
+    height: 8.2vh;
+}
+
+footer .secoes a {
+    color: #FCFCFC;
+}
+
+footer .logo {
+    width: 12vw;
+}
+
+footer .logo img {
+    width: 42px;
+    height: 42px;
+
+}
+
+footer nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .secoes {
+    width: 20vw;
+}
+
+footer .criador {
+    width: 12vw;
+}
+
+footer .criador img{
+    width: 20px;
+    height: 20px;
+}
+
+footer nav a {
+    text-shadow: 1px 1px 1px black;
+}
+
+footer nav span {
+    margin: 0 6%;
+    width: max-content;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+footer nav .redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+
+footer nav span {
+    color: #FCFCFC;
+}
