@@ -23,7 +23,7 @@ section {
     padding: 1%;
 }
 
-.titulo {
+section .titulo {
     background: linear-gradient(to left, #A8862B, #D4AF37,  #D4AF37, #F0D58C);
 
     margin-bottom: 12px;
