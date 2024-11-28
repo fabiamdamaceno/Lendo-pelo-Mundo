@@ -161,11 +161,11 @@ var leituras = [
     }
 ]
 
-
+var citacao = [];
 function gerarLeituras() {
 
     var idUsuario = sessionStorage.ID_USUARIO
-    
+
     fetch(`/leituras/listar/${idUsuario}`).then(function (resposta) {
         if (resposta.ok) {
             if (resposta.status == 204) {
@@ -173,19 +173,48 @@ function gerarLeituras() {
                 throw "Nenhum resultado encontrado!!";
             }
 
-            sessionStorage.idLeitura = json[0].idLeituraUsuario;
 
-            alert(sessionStorage.idLeitura);
 
             resposta.json().then(function (resposta) {
                 console.log("Dados recebidos: ", JSON.stringify(resposta));
 
-                var feed = document.getElementById("feed_container");
-                feed.innerHTML = "";
-                for (let i = 0; i < resposta.length; i++) {
-                    var publicacao = resposta[i];
-                    
-                }
+                var msg = "";
+
+
+                for (var i = 0; i < resposta.length; i++) {
+                    var tituloIndex = resposta[i].titulo;
+                    var autorIndex = resposta[i].autor;
+                    var paisIndex = resposta[i].paisAutor;
+                    var genLiterarioIndex = resposta[i].genLiterario;
+                    var dataIndex = resposta[i].dataLeitura;
+
+                    // tratamento do formato da data
+
+                    var dataIndexExclusão = dataIndex.split('T');
+                    dataIndexReduzida = `${dataIndexExclusão[0]}`
+
+                    var dataIndexParte = dataIndexReduzida.split('-');
+                    dataIndexFormatada = `${dataIndexParte[2]}/${dataIndexParte[1]}/${dataIndexParte[0]}`;
+
+                    msg += 
+                        `
+                            <tr>
+                                <td>${i + 1}</td>
+                                <td>${tituloIndex}</td>
+                                <td>${autorIndex}</td>
+                                <td>${paisIndex}</td>
+                                <td>${genLiterarioIndex}</td>
+                                <td>${dataIndexFormatada}</td>
+                                <td><button onclick="verCitacao(${i})">Ver</button> </td>
+                            </tr>
+                        `;
+
+                    citacao.push(`${resposta[i].citacaoPreferida}`)
+                
+
+                        
+                    }
+                    painelLeituras.innerHTML = msg;
 
             });
         } else {
@@ -195,39 +224,12 @@ function gerarLeituras() {
         console.error(resposta);
     });
 
-    // var msg = '';
-    // painelLeituras.innerHTML = msg;
+}
 
-    // var tamanhoLeituras = leituras.length;
 
-    // for (var i = 0; i < tamanhoLeituras; i++) {
-    //     var tituloIndex = leituras[i].titulo;
-    //     var autorIndex = leituras[i].autor;
-    //     var paisIndex = leituras[i].pais;
-    //     var generoIndex = leituras[i].genero;
-    //     var dataIndex = leituras[i].data;
-
-    //     // tratamento do formato da data
-    //     var dataIndexParte = dataIndex.split('-');
-    //     dataIndexFormatada = `${dataIndexParte[2]}/${dataIndexParte[1]}/${dataIndexParte[0]}`;
-
-    //     msg += `
-    //         <tr>
-    //             <td>${i + 1}</td>
-    //             <td>${tituloIndex}</td>
-    //             <td>${autorIndex}</td>
-    //             <td>${paisIndex}</td>
-    //             <td>${generoIndex}</td>
-    //             <td>${dataIndexFormatada}</td>
-    //             <td><button onclick="verCitacao(${i})">Ver</button> </td>
-    //         </tr>`;
-    // }
-
-    // painelLeituras.innerHTML = msg;
-};
 
 function verCitacao(ID) {
-    alert(leituras[ID].citacao);
+    alert(citacao[ID]);
 };
 
 function adicionarLeitura() {
@@ -304,13 +306,13 @@ function mudarPainel(paginaAtual) {
 function verificarLogin() {
     console.log(sessionStorage.EMAIL_USUARIO)
 
-    if(sessionStorage.EMAIL_USUARIO == undefined) {
+    if (sessionStorage.EMAIL_USUARIO == undefined) {
         a_leituras.style.color = "gray";
         a_dashboard.style.color = "gray";
 
         a_leituras.href = "login.html";
         a_dashboard.href = "login.html";
-        
+
     } else {
         a_leituras.href = "leituras.html";
         a_dashboard.href = "dashboard.html";

@@ -16,7 +16,7 @@ function cadastrar(titulo, rating, autor, genAutor, pais, genLiterario, data, ci
 function listar(idUsuario) {
 
     var instrucaoSql = `
-    SELECT idLeiturausuario, titulo, rating, autor, paisAutor, genAutor, dataLeitura, citacaoPreferida FROM leitura WHERE fkLeituraUsuario_Usuario = ${idUsuario};
+    SELECT idLeiturausuario, titulo, rating, autor, paisAutor, genAutor, genLiterario, dataLeitura, citacaoPreferida FROM leitura WHERE fkLeituraUsuario_Usuario = ${idUsuario};
     `;
   
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
