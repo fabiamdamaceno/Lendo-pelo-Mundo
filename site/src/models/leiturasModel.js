@@ -7,7 +7,7 @@ function cadastrar(titulo, rating, autor, genAutor, pais, genLiterario, data, ci
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-        INSERT INTO leitura (fkLeituraUsuario_Usuario, titulo, rating, autor, genAutor, paisAutor, genLiterario, dataLeitura, citacaoPreferida) VALUES (1,'${titulo}', ${rating}, '${autor}', '${genAutor}', '${pais}', '${genLiterario}', '${data}', '${citacaoPreferida}');
+        INSERT INTO leitura (fkLeituraUsuario_Usuario, titulo, rating, autor, genAutor, paisAutor, genLiterario, dataLeitura, citacaoPreferida) VALUES (2,'${titulo}', ${rating}, '${autor}', '${genAutor}', '${pais}', '${genLiterario}', '${data}', '${citacaoPreferida}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -16,7 +16,7 @@ function cadastrar(titulo, rating, autor, genAutor, pais, genLiterario, data, ci
 function listar(idUsuario) {
 
     var instrucaoSql = `
-    SELECT idLeiturausuario, titulo, rating, autor, paisAutor, genAutor, dataLeitura, citacaoPreferida FROM leitura WHERE fkLeituraUsuario_Usuario = ${idUsuario}
+    SELECT idLeiturausuario, titulo, rating, autor, paisAutor, genAutor, dataLeitura, citacaoPreferida FROM leitura WHERE fkLeituraUsuario_Usuario = ${idUsuario};
     `;
   
     console.log("Executando a instrução SQL: \n" + instrucaoSql);

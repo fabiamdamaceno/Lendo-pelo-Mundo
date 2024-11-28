@@ -175,6 +175,8 @@ function gerarLeituras() {
 
             sessionStorage.idLeitura = json[0].idLeituraUsuario;
 
+            alert(sessionStorage.idLeitura);
+
             resposta.json().then(function (resposta) {
                 console.log("Dados recebidos: ", JSON.stringify(resposta));
 
@@ -193,35 +195,35 @@ function gerarLeituras() {
         console.error(resposta);
     });
 
-    var msg = '';
-    painelLeituras.innerHTML = msg;
+    // var msg = '';
+    // painelLeituras.innerHTML = msg;
 
-    var tamanhoLeituras = leituras.length;
+    // var tamanhoLeituras = leituras.length;
 
-    for (var i = 0; i < tamanhoLeituras; i++) {
-        var tituloIndex = leituras[i].titulo;
-        var autorIndex = leituras[i].autor;
-        var paisIndex = leituras[i].pais;
-        var generoIndex = leituras[i].genero;
-        var dataIndex = leituras[i].data;
+    // for (var i = 0; i < tamanhoLeituras; i++) {
+    //     var tituloIndex = leituras[i].titulo;
+    //     var autorIndex = leituras[i].autor;
+    //     var paisIndex = leituras[i].pais;
+    //     var generoIndex = leituras[i].genero;
+    //     var dataIndex = leituras[i].data;
 
-        // tratamento do formato da data
-        var dataIndexParte = dataIndex.split('-');
-        dataIndexFormatada = `${dataIndexParte[2]}/${dataIndexParte[1]}/${dataIndexParte[0]}`;
+    //     // tratamento do formato da data
+    //     var dataIndexParte = dataIndex.split('-');
+    //     dataIndexFormatada = `${dataIndexParte[2]}/${dataIndexParte[1]}/${dataIndexParte[0]}`;
 
-        msg += `
-            <tr>
-                <td>${i + 1}</td>
-                <td>${tituloIndex}</td>
-                <td>${autorIndex}</td>
-                <td>${paisIndex}</td>
-                <td>${generoIndex}</td>
-                <td>${dataIndexFormatada}</td>
-                <td><button onclick="verCitacao(${i})">Ver</button> </td>
-            </tr>`;
-    }
+    //     msg += `
+    //         <tr>
+    //             <td>${i + 1}</td>
+    //             <td>${tituloIndex}</td>
+    //             <td>${autorIndex}</td>
+    //             <td>${paisIndex}</td>
+    //             <td>${generoIndex}</td>
+    //             <td>${dataIndexFormatada}</td>
+    //             <td><button onclick="verCitacao(${i})">Ver</button> </td>
+    //         </tr>`;
+    // }
 
-    painelLeituras.innerHTML = msg;
+    // painelLeituras.innerHTML = msg;
 };
 
 function verCitacao(ID) {
@@ -299,8 +301,6 @@ function mudarPainel(paginaAtual) {
     }
 }
 
-gerarLeituras();
-
 function verificarLogin() {
     console.log(sessionStorage.EMAIL_USUARIO)
 
@@ -319,3 +319,6 @@ function verificarLogin() {
         a_cadastrar.style.color = "gray";
     }
 }
+
+
+gerarLeituras();

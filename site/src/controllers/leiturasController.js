@@ -50,7 +50,7 @@ function cadastrar(req, res) {
 }
 
 function listar(req, res) {
-    var idUsuario = req.params.fkLeituraUsuario_Usuario;
+    var idUsuario = req.params.idUsuario;
   
     leiturasModel.listar(idUsuario).then((resultado) => {
       if (resultado.length > 0) {
