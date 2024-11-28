@@ -1,163 +1,163 @@
-var leituras= [
+var leituras = [
     {
-        'titulo':'Os Irmãos Karamazov',
-        'autor':'Fyodor Dostoevsky',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-05-25',
-        'citacao':'Salve o tricolor paulista'
+        'titulo': 'Os Irmãos Karamazov',
+        'autor': 'Fyodor Dostoevsky',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-05-25',
+        'citacao': 'Salve o tricolor paulista'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'A Morte de Ivan Ilitch',
-        'autor':'Ivan Ilitch',
-        'pais':'Rússia',
-        'genero':'Romance',
-        'data':'2024-06-10',
-        'citacao':'Amado clube brasileiro'
+        'titulo': 'A Morte de Ivan Ilitch',
+        'autor': 'Ivan Ilitch',
+        'pais': 'Rússia',
+        'genero': 'Romance',
+        'data': '2024-06-10',
+        'citacao': 'Amado clube brasileiro'
     },
     {
-        'titulo':'O Velho e o Mar',
-        'autor':'Ernest Hemingway',
-        'pais':'Estados Unidos',
-        'genero':'Romance',
-        'data':'2024-07-02',
-        'citacao':'Tú és forte, tu és grande'
+        'titulo': 'O Velho e o Mar',
+        'autor': 'Ernest Hemingway',
+        'pais': 'Estados Unidos',
+        'genero': 'Romance',
+        'data': '2024-07-02',
+        'citacao': 'Tú és forte, tu és grande'
     }
 ]
 
@@ -165,10 +165,10 @@ var leituras= [
 function gerarLeituras() {
     var msg = '';
     painelLeituras.innerHTML = msg;
-    
+
     var tamanhoLeituras = leituras.length;
 
-    for(var i = 0; i < tamanhoLeituras; i++) {
+    for (var i = 0; i < tamanhoLeituras; i++) {
         var tituloIndex = leituras[i].titulo;
         var autorIndex = leituras[i].autor;
         var paisIndex = leituras[i].pais;
@@ -190,7 +190,7 @@ function gerarLeituras() {
                 <td><button onclick="verCitacao(${i})">Ver</button> </td>
             </tr>`;
     }
-    
+
     painelLeituras.innerHTML = msg;
 };
 
@@ -220,18 +220,50 @@ function adicionarLeitura() {
             Citação Preferida: ${citacaoPreferida}
         `);
 
+    fetch("/leituras/cadastrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            tituloServer: titulo,
+            ratingServer: rating,
+            autorServer: autor,
+            genAutorServer: genAutor,
+            paisServer: pais,
+            genLiterarioServer: genLiterario,
+            dataServer: data,
+            citacaoPreferidaServer: citacaoPreferida
+        }),
+    })
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert('Inserido com sucesso')
+
+            } else {
+                throw "Houve um erro ao tentar realizar a inserção!";
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+    return false;
+
 };
 
 function mudarPainel(paginaAtual) {
     var leituras = document.getElementById("leituras");
     var adicionarLeitura = document.getElementById("adicionarLeitura");
 
-    if(paginaAtual == 'leituras') {
+    if (paginaAtual == 'leituras') {
         leituras.style.display = 'none';
         adicionarLeitura.style.display = 'flex';
     }
 
-    if(paginaAtual == 'adicionarLeitura') {
+    if (paginaAtual == 'adicionarLeitura') {
         leituras.style.display = 'block';
         adicionarLeitura.style.display = 'none';
     }

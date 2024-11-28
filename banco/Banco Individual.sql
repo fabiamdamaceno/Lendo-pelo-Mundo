@@ -12,6 +12,7 @@ CREATE TABLE usuario (
     senha VARCHAR(45) NOT NULL,
     metaAnual INT
 );
+SELECT * FROM usuario;
 
 INSERT INTO usuario (nome, sobrenome, genero, email, senha, metaAnual) VALUES
 	('Fábiam', 'Damaceno da Silva', 'masculino', 'fabiam.damaceno@gmail.com', MD5('L@pis123'), 12);
@@ -23,16 +24,17 @@ CREATE TABLE leitura (
 		FOREIGN KEY (fkLeituraUsuario_Usuario)
         REFERENCES Usuario(idUsuario),
 	titulo VARCHAR(100),
+	rating DECIMAL(4,2),
     autor VARCHAR(45),
+    genAutor VARCHAR(9),
     paisAutor VARCHAR(45),
-    genero VARCHAR(45),
-    rating DECIMAL(4,2),
+    genLiterario VARCHAR(45),
     dataLeitura DATE DEFAULT (CURRENT_DATE),
     citacaoPreferida VARCHAR(300)
 );
-    
-INSERT INTO leitura (fkLeituraUsuario_Usuario, titulo, autor, paisAutor, genero, rating, citacaoPreferida) VALUES
-	('1', 'Os Irmãos Karamazov', 'Fyodor Dostoevsky', 'Rússia', 'Romance', 5, 'Para o realista, não é a fé que nasce do milagre: é o milagre que nasce da fé. Se o realista passa a ter fé, precisa, em virtude de seu realismo, admitir também o milagre.');
+    SELECT * from leitura;
+INSERT INTO leitura (fkLeituraUsuario_Usuario, titulo, rating, autor, genAutor, paisAutor, genLiterario, dataLeitura, citacaoPreferida) VALUES
+	('1', 'Os Irmãos Karamazov', 5, 'Fyodor Dostoevsky', 'masculino', 'Rússia', 'Romance', '2024-11-27', 'Para o realista, não é a fé que nasce do milagre: é o milagre que nasce da fé. Se o realista passa a ter fé, precisa, em virtude de seu realismo, admitir também o milagre.');
     
 CREATE TABLE livro (
 	idLivro INT PRIMARY KEY AUTO_INCREMENT,
