@@ -5,3 +5,52 @@
     font-size: 16px;
     padding: 1px;
 }
+
+#btn_senha {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 1px;
+}
+
+main {
+    height: 100vh;
+}
+
+/* Container Cadastro */
+
+.containerCadastro {
+    background-color: #524632;
+    margin: auto;
+
+    display: flex;
+    height: 500px;
+    width: 1000px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: left;
+    justify-content: space-around;
+    padding: 2%;
+    margin: auto;
+    width: 50%;
+}
+
+.inputs input, select {
+    width: 160px;
+}
+
+.imgCadastro {
+    height: 500px;
+    width: 50%;
+}
+
+.imgCadastro img {
+    height: 100%;
+    width: 100%;
+}

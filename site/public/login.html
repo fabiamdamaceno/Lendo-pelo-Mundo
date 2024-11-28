@@ -12,19 +12,31 @@
 </head>
 <body>
     
-    Email:
-    <input type="text" id="ipt_email"> <br>
+    <main>
 
-    Senha:
-    <input type="password" id="ipt_senha">
-    <button id="btn_senha" onclick="visualizarSenha()">👁️</button>
-    <br>
-    <div id="div_aviso"></div> <br>
+        <div class="containerCadastro">
+            <div class="inputs">
 
-<br>
+                Email:
+                <input type="text" id="ipt_email"> <br>
+                
+                Senha:
+                <input type="password" id="ipt_senha">
+                <button id="btn_senha" onclick="visualizarSenha()">👁️</button>
+                <br>
+                <div id="div_aviso"></div> <br>
+                
+                <br>
+                
+                <button onclick="recuperarSenha()">Esqueci minha senha</button>
+                <button onclick="entrar()">Entrar</button>
 
-<button onclick="recuperarSenha()">Esqueci minha senha</button>
-<button onclick="entrar()">Entrar</button>
+            </div>
+            <div class="imgCadastro">
+                <img src="./assets/imgs/fotoRascunho.jpg">
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>
