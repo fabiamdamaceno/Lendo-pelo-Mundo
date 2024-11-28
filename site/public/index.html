@@ -22,10 +22,10 @@
             <img src="./assets/imgs/fotoRascunho.jpg">
         </div>
         <nav class="pags">
-            <a>Home</a>
+            <a href="index.html">Home</a>
             <a id="a_leituras">Leituras</a>
             <a id="a_dashboard">Dashboard</a>
-            <a>Simulador</a>
+            <a href="simulador.html">Simulador</a>
         </nav>
         <nav class="sign">
             <a id="a_login" href="login.html">Entrar</a>
@@ -41,7 +41,7 @@
 
 
         <div class="body">
-            <section class="artigos">
+            <section id="section_projetos" class="artigos">
                 <div class="titulo">
                     <div class="parafusos">
                         <div class="parafusoFora parafusoFora1">
@@ -115,7 +115,7 @@
                 </div>
             </section>
 
-            <section class="livros">
+            <section id="section_livros" class="livros">
                 <div class="roda rodateto"></div>
                 <div class="parede"></div>
                 <div class="titulo">
@@ -171,7 +171,7 @@
 
         <div class="body">
 
-            <section class="dados">
+            <section id="section_graficos" class="dados">
                 <div class="titulo">
                     <div class="parafusos">
                         <div class="parafusoFora parafusoFora1">
@@ -215,9 +215,11 @@
             </section>
 
         </div>
+
         <div class="intervalo intervalo2"></div>
+
         <div class="body">
-            <section class="ODS">
+            <section id="section_ODS" class="ODS">
                 <div class="titulo">
                     <div class="parafusos">
                         <div class="parafusoFora parafusoFora1">
@@ -238,19 +240,27 @@
                     </div>
                 </div>
                 <div class="cards">
-                    <div onclick="aparecerCard(1)" class="card card1">Card1</div>
-                    <div onclick="aparecerCard(2)" class="card card2">Card2</div>
-                    <div onclick="aparecerCard(3)" class="card card3">Card3</div>
+                    <div onclick="aparecerCard(1)" class="card card1">
+                        <img src="./assets/imgs/ods_bemEstar.svg">
+                    </div>
+                    <div onclick="aparecerCard(2)" class="card card2">
+                        <img src="./assets/imgs/ods_educacao.svg">
+                    </div>
+                    <div onclick="aparecerCard(3)" class="card card3">
+                        <img src="./assets/imgs/ods_genero.svg">
+                    </div>
                 </div>
                 <div id="cardExplicacao" class="cardTexto">
                 </div>
             </section>
 
         </div>
+
         <div class="intervalo intervalo3"></div>
+
         <div class="body">
 
-            <section class="metas">
+            <section id="section_objetivos" class="metas">
                 <div class="titulo">
                     <div class="parafusos">
                         <div class="parafusoFora parafusoFora1">
@@ -317,10 +327,11 @@
             <img src="./assets/imgs/fotoRascunho.jpg">
         </div>
         <nav class="secoes">
-            <a>Projeto</a>
-            <a>Pesquisa</a>
-            <a>ODS</a>
-            <a>Objetivos</a>
+            <a href="#section_projetos">Projeto</a>
+            <a href="#section_livros">Livros</a>
+            <a href="#section_graficos">Pesquisa</a>
+            <a href="#section_ODS">ODS</a>
+            <a href="#section_objetivos">Objetivos</a>
         </nav>
         <nav class="criador">
             <span>Fábiam Damaceno</span>
@@ -346,17 +357,17 @@
     const ctx2 = document.getElementById('myChart2');
 
     var qtdLivros = ['0', '1', '2 - 4', '5 - 9', '10 ou mais'];
-    var qtdPessoas = [12, 19, 3, 5, 2, 3];
+    var qtdPessoas = [4, 8, 14, 5, 8, 5, 20];
 
-    var autorGenero = ['Homens', 'Mulheres'];
-    var generoLivros = [15, 25];
+    var autorGenero = ['Autores', 'Autoras'];
+    var generoLivros = [101, 57];
 
     new Chart(ctx2, {
         type: 'pie',
         data: {
             labels: autorGenero,
             datasets: [{
-                label: 'Livros Lidos em 2023 (pessoas / quantidade de livros)',
+                label: 'Livros Lidos',
                 data: generoLivros,
                 borderWidth: 1
             }]
@@ -365,12 +376,7 @@
             plugins: {
                 title: {
                     display: true,
-                    text: 'Autores lidos por gênero'
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true
+                    text: '2023 - Livros Lidos por Gênero do Autor'
                 }
             }
         }
@@ -390,7 +396,7 @@
             plugins: {
                 title: {
                     display: true,
-                    text: 'Leitura em 2023'
+                    text: '2023 - Livros Lidos'
                 }
             },
             scales: {
@@ -408,7 +414,9 @@
                         text: 'Quantidade de livros'
                     }
                 }
-            }
+            },
+            responsive: true,
+            maintainAspectRatio: false
         }
     });
 

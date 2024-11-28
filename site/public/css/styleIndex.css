@@ -44,8 +44,10 @@ main .body {
     width: 100%;
     height: 35vh;
     background-size: cover;
+
+    margin: 4vh 0vw;
     
-    box-shadow: inset 0px 0px 8px 2px lightblue;
+    box-shadow: inset 0px 0px 40px 2px lightblue;
 }
 
 .intervalo1 {
@@ -227,16 +229,23 @@ main .body {
     display: flex;
     justify-content: space-around;
     width: 90%;
-    height: 500px;
+    height: 70vh;
 }
 
-/* .grafico {
+.grafico {
+    display: flex;
+    flex-direction: row;
 
-} */
+    justify-content: space-around;
+    align-items: center;
 
-.grafico canva {
-    width: 60vw;
-    height: 60vw !important;
+    width: 45%;
+    height: 90%;
+}
+
+.grafico canvas {
+    width: 100%;
+    height: 100%;
 }
 
 .explicacao p {
@@ -247,26 +256,35 @@ main .body {
 /* Seção - ODS */
 
 .ODS {
-    background-color: gold;
     width: 100%;
 }
 
 .ODS .cards {
-    background-color: aqua;
+    background-color: #5B92E5;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    border-radius: 12px;
+
+    margin: 2% 0%;
+    padding: 1.5% 0%;
+
     width: 90%;
+    box-shadow: inset 0px 0px 5px 1px #FFFAE3;
 }
 
 .ODS .card {
-    background-color: aquamarine;
     width: 18vw;
     height: 18vw;
 }
 
 .ODS .card:hover{
     cursor: pointer;
+}
+
+.ODS .card img {
+    box-shadow: 0px 0px 2px 0.5px black;
 }
 
 /* Seção Objetivos */
@@ -297,18 +315,23 @@ main .body {
 .objetivos .objetivo {
     display: flex;
     flex-direction: row;
-    background-color: #39A2AE;
     margin-top: 1%;
-
-    border-radius: 12px;
-    box-shadow: 0px 0px 5px 1px gray;
+    
+    /* border-radius: 12px; */
 }
 
 
 .objetivos .objetivo .texto {
+    background-color: #39A2AE;
+    box-shadow: 0px 0px 8px 1px gray;
+
     padding: 1%;
-    width: 60%;
+    width: 70%;
     height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
 }
 
 .objetivos .objetivo .texto h3 {
@@ -319,6 +342,20 @@ main .body {
     margin-top: 1.5%;
     margin-left: 1.5%;
     font-size: 20px;
-    width: 80%;
+    width: 95%;
     text-align: justify;
+}
+
+.objetivos .objetivo .imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.objetivos .objetivo img {
+    justify-self: center;
+    align-self: center;
+
+    height: 80%;
+    width: 80%;
 }

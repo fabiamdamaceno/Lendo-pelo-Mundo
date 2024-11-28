@@ -172,3 +172,22 @@ new Chart(ctx4, {
         }
     }
 });
+
+function verificarLogin() {
+    console.log(sessionStorage.EMAIL_USUARIO)
+
+    if(sessionStorage.EMAIL_USUARIO == undefined) {
+        a_leituras.style.color = "gray";
+        a_dashboard.style.color = "gray";
+
+        a_leituras.href = "login.html";
+        a_dashboard.href = "login.html";
+        
+    } else {
+        a_leituras.href = "leituras.html";
+        a_dashboard.href = "dashboard.html";
+
+        a_login.style.color = "gray";
+        a_cadastrar.style.color = "gray";
+    }
+}

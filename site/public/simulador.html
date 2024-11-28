@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/styleSimulador.css">
 
-    <script src="scriptSimulador.js"></script>
+    <script src="./js/scriptSimulador.js"></script>
 </head>
-<body>
+<body onload="verificarLogin()">
 
     <header>
         <div class="logo">
             <img src="./assets/imgs/fotoRascunho.jpg">
         </div>
         <nav class="pags">
-            <a>Home</a>
-            <a>Mapa</a>
-            <a>Simulador</a>
-            <a>Perfil</a>
+            <a href="index.html">Home</a>
+            <a id="a_leituras">Leituras</a>
+            <a id="a_dashboard">Dashboard</a>
+            <a href="simulador.html">Simulador</a>
         </nav>
         <nav class="sign">
-            <a>Entrar</a>
-            <a>Cadastrar</a>
+            <a id="a_login" href="login.html">Entrar</a>
+            <a id="a_cadastrar" href="cadastro.html">Cadastrar</a>
         </nav>
     </header>
 
@@ -54,11 +54,11 @@
 
     <footer>
         <div class="logo">
-            <img src="imgs/biblioteca.jpg">
+            <img src="./assets/imgs/fotoRascunho.jpg">
         </div>
         <nav class="secoes">
-            <a>A ESCREVER</a>
-            <a>A ESCREVER</a>
+            <!-- <a>A ESCREVER</a>
+            <a>A ESCREVER</a> -->
         </nav>
         <nav class="criador">
             <span>Fábiam Damaceno</span>
