@@ -4,6 +4,19 @@ main {
     height: 91.8vh;
 }
 
+/* Graficos */
+
+.grafico {
+    height: 18vw;
+    width: 18vw;
+
+}
+
+canvas {
+    height: 100%;
+    width: 100%;
+}
+
 /* Estilização */
 
 .body {

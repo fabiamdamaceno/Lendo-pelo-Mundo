@@ -163,6 +163,36 @@ var leituras = [
 
 
 function gerarLeituras() {
+
+    var idUsuario = sessionStorage.ID_USUARIO
+    
+    fetch(`/leituras/listar/${idUsuario}`).then(function (resposta) {
+        if (resposta.ok) {
+            if (resposta.status == 204) {
+                alert("Nenhum resultado encontrado.")
+                throw "Nenhum resultado encontrado!!";
+            }
+
+            sessionStorage.idLeitura = json[0].idLeituraUsuario;
+
+            resposta.json().then(function (resposta) {
+                console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                var feed = document.getElementById("feed_container");
+                feed.innerHTML = "";
+                for (let i = 0; i < resposta.length; i++) {
+                    var publicacao = resposta[i];
+                    
+                }
+
+            });
+        } else {
+            throw ('Houve um erro na API!');
+        }
+    }).catch(function (resposta) {
+        console.error(resposta);
+    });
+
     var msg = '';
     painelLeituras.innerHTML = msg;
 

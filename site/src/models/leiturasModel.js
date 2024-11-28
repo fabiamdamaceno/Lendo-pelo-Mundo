@@ -13,6 +13,17 @@ function cadastrar(titulo, rating, autor, genAutor, pais, genLiterario, data, ci
     return database.executar(instrucaoSql);
 }
 
+function listar(idUsuario) {
+
+    var instrucaoSql = `
+    SELECT idLeiturausuario, titulo, rating, autor, paisAutor, genAutor, dataLeitura, citacaoPreferida FROM leitura WHERE fkLeituraUsuario_Usuario = ${idUsuario}
+    `;
+  
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+  }
+
 module.exports = {
-    cadastrar
+    cadastrar,
+    listar
 };
