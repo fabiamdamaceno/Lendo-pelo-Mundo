@@ -34,7 +34,7 @@ main {
 
     background: linear-gradient(to left, #A8862B, #D4AF37,  #D4AF37, #F0D58C);
 
-    margin-bottom: 12px;
+    margin-bottom: 22px;
     padding: 0.4% 0.4%;
     border: 8px solid #524632;
     box-shadow: 3px 2px 5px 1px black;
@@ -51,15 +51,22 @@ main {
     justify-content: center;
     align-items: left;
     justify-content: space-around;
-    padding: 2%;
+    padding: 1.5%;
     margin: auto;
 
     height: 100%;
     width: 50%;
 }
 
+.lado {
+    width: 48%;
+}
+
 .conteudoCadastro input, select {
     width: 160px;
+    height: 24px;
+
+    padding: 1%;
 }
 
 .conteudoCadastro .containerInput {
@@ -67,20 +74,31 @@ main {
     flex-direction: row;
 
     justify-content: space-between;
-    width: 400px;
-}
-
-.conteudoCadastro .containerInput .inserirInput {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: space-between;
-
-    width: 300px;
+    width: 50%;
 }
 
 .inputs {
     padding: 3% 1%;
+
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.conteudoCadastro .containerInput .inserirInput {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    width: 50%;
+
+    font-size: 20px;
+}
+
+.inserirInput span {
+    width: 180px;
 }
 
 .imgCadastro {
