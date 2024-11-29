@@ -1,14 +1,14 @@
 /* Reescrevendo tamanho da Main */
 
-main {
+/* main {
     height: 91.8vh;
-}
+} */
 
 /* Graficos */
 
 .grafico {
-    height: 18vw;
-    width: 18vw;
+    height: 30vw;
+    width: 30vw;
 
 }
 

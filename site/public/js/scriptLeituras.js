@@ -1,166 +1,3 @@
-var leituras = [
-    {
-        'titulo': 'Os Irmãos Karamazov',
-        'autor': 'Fyodor Dostoevsky',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-05-25',
-        'citacao': 'Salve o tricolor paulista'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'A Morte de Ivan Ilitch',
-        'autor': 'Ivan Ilitch',
-        'pais': 'Rússia',
-        'genero': 'Romance',
-        'data': '2024-06-10',
-        'citacao': 'Amado clube brasileiro'
-    },
-    {
-        'titulo': 'O Velho e o Mar',
-        'autor': 'Ernest Hemingway',
-        'pais': 'Estados Unidos',
-        'genero': 'Romance',
-        'data': '2024-07-02',
-        'citacao': 'Tú és forte, tu és grande'
-    }
-]
-
 var citacao = [];
 function gerarLeituras() {
 
@@ -209,10 +46,8 @@ function gerarLeituras() {
                             </tr>
                         `;
 
-                    citacao.push(`${resposta[i].citacaoPreferida}`)
+                        citacao.push(`${resposta[i].citacaoPreferida}`)
                 
-
-                        
                     }
                     painelLeituras.innerHTML = msg;
 
@@ -226,11 +61,10 @@ function gerarLeituras() {
 
 }
 
-
-
 function verCitacao(ID) {
     alert(citacao[ID]);
 };
+
 
 function adicionarLeitura() {
     var titulo = ipt_titulo.value;
@@ -241,6 +75,10 @@ function adicionarLeitura() {
     var genLiterario = ipt_genLiterario.value;
     var data = ipt_data.value;
     var citacaoPreferida = ipt_citacaoPreferida.value;
+
+    if(genAutor == '#') {
+        alert('Insira o Gênero do autor')
+    } else {
 
     alert(`
             Leitura Adicionada:
@@ -285,7 +123,7 @@ function adicionarLeitura() {
         });
 
     return false;
-
+    }
 };
 
 function mudarPainel(paginaAtual) {
