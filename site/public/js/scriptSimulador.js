@@ -49,6 +49,7 @@ function calcular(tempo) {
         Considerando que em média: <br>
             Uma página comtém 300 palavras e <br>
             Um livro contém 200 páginas. <br>
+            The Three Book Rule dita que ler 3 livros de um mesmo assunto o torna um especialista, por passar a saber mais que 99% da popução sobre isso.
     `;
 };
 

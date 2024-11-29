@@ -3,10 +3,7 @@ const ctx2 = document.getElementById('myChart2');
 const ctx3 = document.getElementById('myChart3');
 const ctx4 = document.getElementById('myChart4');
 
-
-
-var qtdLivros = ['0', '1', '2 - 4', '5 - 9', '10 ou mais'];
-var qtdPessoas = [12, 19, 3, 5, 2, 3];
+// Variaveis Gráficos
 
 var c1_mes = ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
 var c1_livrosMes;
@@ -25,8 +22,14 @@ var paisQtd1;
 var paisQtd3;
 var c3_livrosPais;
 
-var c4_generoLiterario = ['Fantasia', 'Romance', 'Suspense', 'Técnico', 'Humanidades'];
-var c4_livroGeneroLiterario = [3, 7, 1, 2, 3];
+var c4_generoLiterario;
+var genFantasia = 0;
+var genRomance = 0;
+var genSuspense = 0;
+var genTecnico = 0;
+var genHumanidades = 0;
+var c4_livroGeneroLiterario;
+var c4_resultadosPesquisa;
 
 var livrosJan = 0;
 var livrosFev = 0;
@@ -40,6 +43,16 @@ var livrosSet = 0;
 var livrosOut = 0;
 var livrosNov = 0;
 var livrosDez = 0;
+
+// Variaves KPIs
+
+var livrosLidos;
+var mediaLivrosLidos;
+var autorPreferido;
+var genPreferido;
+var paisPreferido;
+
+
 
 function gerarGraficos() {
 
@@ -66,21 +79,22 @@ function gerarGraficos() {
 
                 for (var i = 0; i < resposta.length; i++) {
                     // var tituloIndex = resposta[i].titulo;
-                    // var autorIndex = resposta[i].autor;
-                    
+
                     // tratamento do formato da data
-                    
+
                     // var dataIndexFormatada = `${dataIndexParte[2]}/${dataIndexParte[1]}/${dataIndexParte[0]}`;
+
+                    // Gráficos
 
                     // Tratamento Dados Gráfico 1
 
                     var dataIndex = resposta[i].dataLeitura;
 
                     var dataIndexExclusão = dataIndex.split('T');
-                    
+
                     var dataIndexReduzida = `${dataIndexExclusão[0]}`
                     var dataIndexParte = dataIndexReduzida.split('-');
-                    
+
                     var mes = dataIndexParte[1];
 
                     switch (mes) {
@@ -125,9 +139,9 @@ function gerarGraficos() {
                     // Tratamento Dados Gráfico 2
                     var genAutorIndex = resposta[i].genAutor;
 
-                    if(genAutorIndex == 'masculino') {
+                    if (genAutorIndex == 'masculino') {
                         livrosHomem++;
-                    } else if(genAutorIndex == 'feminino') {
+                    } else if (genAutorIndex == 'feminino') {
                         livrosMulher++;
                     }
 
@@ -136,61 +150,140 @@ function gerarGraficos() {
                     var paisPosicao = paisProvisorio.indexOf(paisIndex);
 
 
-                    if(paisPosicao == -1) {
+                    if (paisPosicao == -1) {
                         paisProvisorio.push(paisIndex);
                         livrosPaisProvisorio.push(1);
 
                     } else {
                         livrosPaisProvisorio[paisPosicao]++;
                     }
-                    
-                    // Tratamento Dados Gráfico 4
 
+                    // Tratamento Dados Gráfico 4
 
                     var genLiterarioIndex = resposta[i].genLiterario;
 
-                    
-                    
-
-
-                };
-
-                c1_livrosMes = [livrosJan, livrosFev, livrosMar, livrosAbr, livrosMaio, livrosJun, livrosJul, livrosAgo, livrosSet, livrosOut, livrosNov, livrosDez];
-
-                c2_autorGeneroLivros = [livrosHomem, livrosMulher];
-
-                paisQtd2 = 0
-                paisQtd1 = 0
-                paisQtd3 = 0
-
-                for(var i = 0; i < paisProvisorio.length; i++) {
-                    var paisProvisorioAtual = paisProvisorio[i];
-                    var livrosPaisProvisorioAtual = Number(livrosPaisProvisorio[i]);
-
-                    if(livrosPaisProvisorioAtual > paisQtd1) {
-                        paisQtd1 = livrosPaisProvisorioAtual;
-                        paisNome1 = paisProvisorioAtual;
-                        
-                    } else if(livrosPaisProvisorioAtual > paisQtd2) {
-                        paisQtd2 = livrosPaisProvisorioAtual;
-                        paisNome2 = paisProvisorioAtual;
-                        
-                    } else if(livrosPaisProvisorioAtual > paisQtd3) {
-                        paisQtd3 = livrosPaisProvisorioAtual;
-                        paisNome3 = paisProvisorioAtual;
-                        
+                    switch (genLiterarioIndex) {
+                        case 'Fantasia':
+                            genFantasia++;
+                            break;
+                        case 'Romance':
+                            genRomance++;
+                            break;
+                        case 'Suspense':
+                            genSuspense++;
+                            break;
+                        case 'Técnico':
+                            genTecnico++;
+                            break;
+                        case 'Humanidades':
+                            genHumanidades++;
+                            break;
                     }
 
-                };
+                    };
 
-                c3_livrosPais = [paisQtd2, paisQtd1, paisQtd3, paisQtd1*1.5];
-                c3_paises = [paisNome2, paisNome1, paisNome3];
+                    c1_livrosMes = [livrosJan, livrosFev, livrosMar, livrosAbr, livrosMaio, livrosJun, livrosJul, livrosAgo, livrosSet, livrosOut, livrosNov, livrosDez];
+
+                    c2_autorGeneroLivros = [livrosHomem, livrosMulher];
+
+                    paisQtd2 = 0
+                    paisQtd1 = 0
+                    paisQtd3 = 0
+
+                    for (var i = 0; i < paisProvisorio.length; i++) {
+                        var paisProvisorioAtual = paisProvisorio[i];
+                        var livrosPaisProvisorioAtual = Number(livrosPaisProvisorio[i]);
+
+                        if (livrosPaisProvisorioAtual > paisQtd1) {
+                            paisQtd1 = livrosPaisProvisorioAtual;
+                            paisNome1 = paisProvisorioAtual;
+
+                        } else if (livrosPaisProvisorioAtual > paisQtd2) {
+                            paisQtd2 = livrosPaisProvisorioAtual;
+                            paisNome2 = paisProvisorioAtual;
+
+                        } else if (livrosPaisProvisorioAtual > paisQtd3) {
+                            paisQtd3 = livrosPaisProvisorioAtual;
+                            paisNome3 = paisProvisorioAtual;
+
+                        }
+
+                    };
+
+                    c3_livrosPais = [paisQtd2, paisQtd1, paisQtd3, paisQtd1 * 1.5];
+                    c3_paises = [paisNome2, paisNome1, paisNome3];
+
+                    var totalLivros = Number(resposta.length);
+                    var genFantasiaPorc = Number((genFantasia / totalLivros) * 100);
+                    var genRomancePorc = (genRomance / totalLivros) * 100;
+                    var genSuspensePorc = (genSuspense / totalLivros) * 100;
+                    var genTecnicoPorc = (genTecnico / totalLivros) * 100;
+                    var genHumanidadesPorc = (genHumanidades / totalLivros) * 100;
+
+                    console.log(genFantasiaPorc)
+                    console.log(genRomancePorc)
+                    console.log(genSuspensePorc)
+                    console.log(genTecnicoPorc)
+                    console.log(genHumanidadesPorc)
+
+                    c4_generoLiterario = ['Fantasia', 'Romance', 'Suspense', 'Técnico', 'Humanidades'];
+                    c4_livroGeneroLiterario = [genFantasiaPorc, genRomancePorc, genSuspensePorc, genTecnicoPorc, genHumanidadesPorc];
+                    c4_resultadosPesquisa = [27.5, 20, 15, 12.5, 10];
 
 
 
-                plotarGraficos()
+                    plotarGraficos()
 
-            });
+                    // KPIs
+
+                    livrosLidos = totalLivros;
+
+                    mediaLivrosLidos = livrosLidos/12;
+
+                    var autores;
+                    var qtdLivrosAutor;
+
+                    // for (var cont = 0; cont < totalLivros.length; cont++) {
+                    var autorIndex = resposta[i].autor;
+                    var posicaoAutor = autores.indexOf(autorIndex);
+
+                    if(posicaoAutor == -1) {
+                        autores.push = autorIndex;
+                        qtdLivrosAutor.push(1);
+
+                    } else {
+                        qtdLivrosAutor[i]++;
+
+                    }
+
+                    console.log(autores, qtdLivrosAutor)
+
+                        // var qtdLivrosAutorAtual = Number(qtdLivrosAutor[i]);
+
+                        // if (qtdLivrosAutorAtual > paisQtd1) {
+                        //     paisQtd1 = livrosPaisProvisorioAtual;
+                        //     paisNome1 = paisProvisorioAtual;
+
+                        // } else if (livrosPaisProvisorioAtual > paisQtd2) {
+                        //     paisQtd2 = livrosPaisProvisorioAtual;
+                        //     paisNome2 = paisProvisorioAtual;
+
+                        // } else if (livrosPaisProvisorioAtual > paisQtd3) {
+                        //     paisQtd3 = livrosPaisProvisorioAtual;
+                        //     paisNome3 = paisProvisorioAtual;
+
+                        // }
+                    // }; 
+
+                    autorPreferido = 
+
+                    genPreferido = 
+
+                    paisPreferido = paisNome1;
+
+                    plotarKPIs();
+
+                });
         } else {
             throw ('Houve um erro na API!');
         }
@@ -199,6 +292,10 @@ function gerarGraficos() {
     });
 
 }
+
+function plotarKPIs() {
+    alert('oi');
+};
 
 function plotarGraficos() {
 
@@ -237,25 +334,25 @@ function plotarGraficos() {
             }
         }
     });
-    
+
     new Chart(ctx2, {
         type: 'pie',
-    data: {
-        labels: c2_generoAutor,
-        datasets: [{
-            label: 'Livros Lidos',
-            data: c2_autorGeneroLivros,
-            borderWidth: 1
-        }]
-    },
-    options: {
-        plugins: {
-            title: {
-                display: true,
-                text: 'Gênero dos Autores Lidos'
-            }
+        data: {
+            labels: c2_generoAutor,
+            datasets: [{
+                label: 'Livros Lidos',
+                data: c2_autorGeneroLivros,
+                borderWidth: 1
+            }]
         },
-    }
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Gênero dos Autores Lidos'
+                }
+            },
+        }
     });
 
     new Chart(ctx3, {
@@ -298,11 +395,18 @@ function plotarGraficos() {
         type: 'radar',
         data: {
             labels: c4_generoLiterario,
-            datasets: [{
-                label: 'Livros por Gênero',
-                data: c4_livroGeneroLiterario,
-                borderWidth: 2
-            }]
+            datasets: [
+                {
+                    label: 'Suas Preferências',
+                    data: c4_livroGeneroLiterario,
+                    borderWidth: 2
+                },
+                {
+                    label: 'Preferências Pesquisa',
+                    data: c4_resultadosPesquisa,
+                    borderWidth: 2
+                }
+            ]
         },
         options: {
             plugins: {
@@ -314,7 +418,7 @@ function plotarGraficos() {
         }
     });
 };
-    
+
 
 
 
