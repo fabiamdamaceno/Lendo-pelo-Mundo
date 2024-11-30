@@ -101,9 +101,7 @@ main .body {
 
 .artigos .artigo .texto {
     padding: 1%;
-    width: 60%;
-    height: 45vh;
-
+    width: 75%;
 }
 
 .artigos .artigo .texto h3 {
@@ -113,8 +111,9 @@ main .body {
 .artigos .artigo .texto p {
     margin-top: 1.5%;
     margin-left: 1.5%;
+    padding: 0% 1%;
     font-size: 20px;
-    width: 80%;
+    width: 100%;
     text-align: justify;
 }
 
@@ -122,11 +121,13 @@ main .body {
     display: flex;
     flex-direction: column;
     justify-content: right;
+
+    padding-right: 3%;
 }
 
 .artigos .artigo .imagem {
     padding: 1%;
-    width: 40%;
+    width: 25%;
     height: 45vh;
 
     display: flex;
@@ -136,6 +137,11 @@ main .body {
 
 .artigo img {
     height: 250px;
+    width: 250px;
+
+    border: 12px solid #AF8751;
+    box-shadow: 0px 0px 5px 1px black;
+    border-radius: 8px;
 }
 
 /* Seção - Livros Fundamentais */
@@ -143,7 +149,7 @@ main .body {
 .livros {
     background-color: #C2B280;
     width: 98.9vw;
-    height: 825px;
+    /* height: 875px; */
     padding: 0% 1% !important;
 }
 
@@ -222,6 +228,25 @@ main .body {
     cursor: pointer;
 }
 
+.cardTexto {
+    background-color: #FCFCFC;
+    margin: 1% 2%;
+    padding: 0% 0.5%;
+
+    font-size: 20px;
+    text-align: justify;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border: 2px solid #DADADA;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px 1px black;
+
+    width: 80%;
+}
+
 /* Seção - Gráficos Pesquisa */
 
 .dados {
@@ -233,6 +258,7 @@ main .body {
     border: 7px solid #AF8751;
 
     box-shadow: inset 0px 0px 5px 1px black;
+
 
     padding: 3% 0.5%;
     display: flex;
@@ -306,13 +332,18 @@ main .body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid yellow;
+    
+    background-color: yellow;
 }
 
-.objetivo img {
-    height: 56vh;
-    width: 56vh;
+.objetivo .imagem img {
+    height: 100%;
+    width: 100%;
     justify-self: center;
     align-self: center;
+    border: 20px solid yellow;
+
 }
 
 .objetivos {
