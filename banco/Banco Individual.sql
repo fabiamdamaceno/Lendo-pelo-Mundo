@@ -1,4 +1,5 @@
 CREATE DATABASE lendoMundo;
+
 USE lendoMundo;
 -- drop database lendoMundo;
 CREATE TABLE usuario (
@@ -32,9 +33,16 @@ CREATE TABLE leitura (
     dataLeitura DATE DEFAULT (CURRENT_DATE),
     citacaoPreferida VARCHAR(300)
 );
-    SELECT * from leitura;
+
+
+    
 INSERT INTO leitura (fkLeituraUsuario_Usuario, titulo, rating, autor, genAutor, paisAutor, genLiterario, dataLeitura, citacaoPreferida) VALUES
 	('1', 'Os Irmãos Karamazov', 5, 'Fyodor Dostoevsky', 'masculino', 'Rússia', 'Romance', '2024-11-27', 'Para o realista, não é a fé que nasce do milagre: é o milagre que nasce da fé. Se o realista passa a ter fé, precisa, em virtude de seu realismo, admitir também o milagre.');
+
+SELECT * from leitura;
+
+SELECT count(genAutor), genAutor FROM leitura
+	GROUP BY genAutor;
     
 CREATE TABLE livro (
 	idLivro INT PRIMARY KEY AUTO_INCREMENT,

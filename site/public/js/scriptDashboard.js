@@ -180,110 +180,125 @@ function gerarGraficos() {
                             break;
                     }
 
-                    };
+                };
 
-                    c1_livrosMes = [livrosJan, livrosFev, livrosMar, livrosAbr, livrosMaio, livrosJun, livrosJul, livrosAgo, livrosSet, livrosOut, livrosNov, livrosDez];
+                c1_livrosMes = [livrosJan, livrosFev, livrosMar, livrosAbr, livrosMaio, livrosJun, livrosJul, livrosAgo, livrosSet, livrosOut, livrosNov, livrosDez];
 
-                    c2_autorGeneroLivros = [livrosHomem, livrosMulher];
+                c2_autorGeneroLivros = [livrosHomem, livrosMulher];
 
-                    paisQtd2 = 0
-                    paisQtd1 = 0
-                    paisQtd3 = 0
+                paisQtd2 = 0
+                paisQtd1 = 0
+                paisQtd3 = 0
 
-                    for (var i = 0; i < paisProvisorio.length; i++) {
-                        var paisProvisorioAtual = paisProvisorio[i];
-                        var livrosPaisProvisorioAtual = Number(livrosPaisProvisorio[i]);
+                for (var i = 0; i < paisProvisorio.length; i++) {
+                    var paisProvisorioAtual = paisProvisorio[i];
+                    var livrosPaisProvisorioAtual = Number(livrosPaisProvisorio[i]);
 
-                        if (livrosPaisProvisorioAtual > paisQtd1) {
-                            paisQtd1 = livrosPaisProvisorioAtual;
-                            paisNome1 = paisProvisorioAtual;
+                    if (livrosPaisProvisorioAtual > paisQtd1) {
+                        paisQtd1 = livrosPaisProvisorioAtual;
+                        paisNome1 = paisProvisorioAtual;
 
-                        } else if (livrosPaisProvisorioAtual > paisQtd2) {
-                            paisQtd2 = livrosPaisProvisorioAtual;
-                            paisNome2 = paisProvisorioAtual;
+                    } else if (livrosPaisProvisorioAtual > paisQtd2) {
+                        paisQtd2 = livrosPaisProvisorioAtual;
+                        paisNome2 = paisProvisorioAtual;
 
-                        } else if (livrosPaisProvisorioAtual > paisQtd3) {
-                            paisQtd3 = livrosPaisProvisorioAtual;
-                            paisNome3 = paisProvisorioAtual;
-
-                        }
-
-                    };
-
-                    c3_livrosPais = [paisQtd2, paisQtd1, paisQtd3, paisQtd1 * 1.5];
-                    c3_paises = [paisNome2, paisNome1, paisNome3];
-
-                    var totalLivros = Number(resposta.length);
-                    var genFantasiaPorc = Number((genFantasia / totalLivros) * 100);
-                    var genRomancePorc = (genRomance / totalLivros) * 100;
-                    var genSuspensePorc = (genSuspense / totalLivros) * 100;
-                    var genTecnicoPorc = (genTecnico / totalLivros) * 100;
-                    var genHumanidadesPorc = (genHumanidades / totalLivros) * 100;
-
-                    console.log(genFantasiaPorc)
-                    console.log(genRomancePorc)
-                    console.log(genSuspensePorc)
-                    console.log(genTecnicoPorc)
-                    console.log(genHumanidadesPorc)
-
-                    c4_generoLiterario = ['Fantasia', 'Romance', 'Suspense', 'Técnico', 'Humanidades'];
-                    c4_livroGeneroLiterario = [genFantasiaPorc, genRomancePorc, genSuspensePorc, genTecnicoPorc, genHumanidadesPorc];
-                    c4_resultadosPesquisa = [27.5, 20, 15, 12.5, 10];
-
-
-
-                    plotarGraficos()
-
-                    // KPIs
-
-                    livrosLidos = totalLivros;
-
-                    mediaLivrosLidos = livrosLidos/12;
-
-                    var autores;
-                    var qtdLivrosAutor;
-
-                    // for (var cont = 0; cont < totalLivros.length; cont++) {
-                    var autorIndex = resposta[i].autor;
-                    var posicaoAutor = autores.indexOf(autorIndex);
-
-                    if(posicaoAutor == -1) {
-                        autores.push = autorIndex;
-                        qtdLivrosAutor.push(1);
-
-                    } else {
-                        qtdLivrosAutor[i]++;
+                    } else if (livrosPaisProvisorioAtual > paisQtd3) {
+                        paisQtd3 = livrosPaisProvisorioAtual;
+                        paisNome3 = paisProvisorioAtual;
 
                     }
 
-                    console.log(autores, qtdLivrosAutor)
+                };
 
-                        // var qtdLivrosAutorAtual = Number(qtdLivrosAutor[i]);
+                c3_livrosPais = [paisQtd2, paisQtd1, paisQtd3, paisQtd1 * 1.5];
+                c3_paises = [paisNome2, paisNome1, paisNome3];
 
-                        // if (qtdLivrosAutorAtual > paisQtd1) {
-                        //     paisQtd1 = livrosPaisProvisorioAtual;
-                        //     paisNome1 = paisProvisorioAtual;
+                var totalLivros = Number(resposta.length);
+                var totalLivrosRadarUsuario = genFantasia + genRomance + genSuspense + genTecnico + genHumanidades;
+                var genFantasiaPorc = Number((genFantasia / totalLivrosRadarUsuario) * 100);
+                var genRomancePorc = Number((genRomance / totalLivrosRadarUsuario) * 100);
+                var genSuspensePorc = Number((genSuspense / totalLivrosRadarUsuario) * 100);
+                var genTecnicoPorc = Number((genTecnico / totalLivrosRadarUsuario) * 100);
+                var genHumanidadesPorc = Number((genHumanidades / totalLivrosRadarUsuario) * 100);
 
-                        // } else if (livrosPaisProvisorioAtual > paisQtd2) {
-                        //     paisQtd2 = livrosPaisProvisorioAtual;
-                        //     paisNome2 = paisProvisorioAtual;
+                console.log(genFantasiaPorc)
+                console.log(genRomancePorc)
+                console.log(genSuspensePorc)
+                console.log(genTecnicoPorc)
+                console.log(genHumanidadesPorc)
 
-                        // } else if (livrosPaisProvisorioAtual > paisQtd3) {
-                        //     paisQtd3 = livrosPaisProvisorioAtual;
-                        //     paisNome3 = paisProvisorioAtual;
+                c4_generoLiterario = ['Fantasia', 'Romance', 'Suspense', 'Técnico', 'Humanidades'];
+                c4_livroGeneroLiterario = [genFantasiaPorc, genRomancePorc, genSuspensePorc, genTecnicoPorc, genHumanidadesPorc];
+                c4_resultadosPesquisa = [32.3, 23.5, 17.6, 14.7, 11.7];
 
-                        // }
-                    // }; 
+                plotarGraficos()
 
-                    autorPreferido = 
+                // KPIs
 
-                    genPreferido = 
+                livrosLidos = Number(totalLivros);
+
+                mediaLivrosLidos = livrosLidos / 12;
+
+                var autores = [];
+                var qtdLivrosAutor = [];
+                var qtdAutorPreferido = 0;
+                var autorMaisLido;
+
+                var generos = [];
+                var qtdLivrosGenero = [];
+                var qtdGeneroPreferido = 0;
+                var generoMaisLido;
+
+                for(var i = 0; i < totalLivros; i++) {
+                    var autorIndex = resposta[i].autor;
+                    var genIndex = resposta[i].genLiterario;
+                    var posicaoAutorLista = autores.indexOf(autorIndex);
+                    var posicaoGeneroLista = generos.indexOf(genIndex);
+
+                    if (posicaoAutorLista == -1) {
+                        autores.push(autorIndex);
+                        qtdLivrosAutor.push(1);
+
+                    } else {
+                        qtdLivrosAutor[posicaoAutorLista]++;
+
+                    }
+
+                    if(qtdLivrosAutor[posicaoAutorLista] > qtdAutorPreferido) {
+                        qtdAutorPreferido = qtdLivrosAutor[posicaoAutorLista]
+                        autorMaisLido = autorIndex;
+                    }
+
+
+                    if (posicaoGeneroLista == -1) {
+                        generos.push(genIndex);
+                        qtdLivrosGenero.push(1);
+
+                    } else {
+                        qtdLivrosGenero[posicaoGeneroLista]++;
+
+                    }
+
+                    if(qtdLivrosGenero[posicaoGeneroLista] > qtdGeneroPreferido) {
+                        qtdGeneroPreferido = qtdLivrosGenero[posicaoGeneroLista]
+                        generoMaisLido = genIndex;
+                    }
+
+
+                };
+
+                console.log(autores, qtdLivrosAutor)
+
+                    autorPreferido = autorMaisLido;
+
+                    
+                    genPreferido = generoMaisLido;
 
                     paisPreferido = paisNome1;
 
-                    plotarKPIs();
+                plotarKPIs();
 
-                });
+            });
         } else {
             throw ('Houve um erro na API!');
         }
