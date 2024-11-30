@@ -298,6 +298,17 @@ function gerarGraficos() {
 
                 plotarKPIs();
 
+
+                // 3 brasileiros
+                // 3 americanos
+                // 3 ingleses
+                // 3 japoneses
+                // 3 russos
+
+                // 3 
+
+                plotarConquistas();
+
             });
         } else {
             throw ('Houve um erro na API!');
@@ -308,8 +319,17 @@ function gerarGraficos() {
 
 }
 
+function plotarConquistas() {
+        alert('Ola')
+}
+
 function plotarKPIs() {
-    alert('oi');
+    span_livrosLidos.innerHTML = livrosLidos;
+    span_mediaLivrosLidos.innerHTML = (mediaLivrosLidos).toFixed(2);
+    span_autorPreferido.innerHTML = autorPreferido;
+    span_genPreferido.innerHTML = genPreferido;
+    span_paisPreferido.innerHTML = paisPreferido;
+
 };
 
 function plotarGraficos() {
