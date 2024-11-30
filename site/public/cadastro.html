@@ -40,71 +40,73 @@
 
                 <div class="inputs">
 
-                    <div class="lado">
+                    <div class="setor">
 
                         <div class="containerInput">
                             <div class="inserirInput">
-                                <input placeholder="Nome" oninput="validarNome()" type="text" id="ipt_nome"> <br>
+                                <input placeholder="Nome" oninput="validarNome()" type="text" id="ipt_nome">
                             </div>
-                            <div id="div_msgNome"><br></div>
+                            <div class="msgErro" id="div_msgNome"></div>
                         </div>
-
-                        <div class="containerInput">
-                            <div class="inserirInput">
-                                <input placeholder="Email" oninput="validarEmail()" type="text" id="ipt_email"> <br>
-                            </div>
-                            <div id="div_msgEmail"><br></div>
-                        </div>
-
-                        <div class="containerInput">
-                            <div class="inserirInput">
-                                <input placeholder="Senha" oninput="validarSenha()" type="password" id="ipt_senha">
-                                <button id="btn_senha" onclick="visualizarSenha()">👁️</button>
-                                <br>
-                            </div>
-                            <div id="div_msgSenha"><br><br><br><br><br><br></div>
-                        </div>
-                    </div>
-
-                    <div class="lado">
 
                         <div class="containerInput">
                             <div class="inserirInput">
                                 <input placeholder="Sobrenome" oninput="validarSobrenome()" type="text"
                                     id="ipt_sobrenome">
-                                <br>
                             </div>
-                            <div id="div_msgSobrenome"><br></div>
+                            <div class="msgErro" id="div_msgSobrenome"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="setor">
+
+                        <div class="containerInput">
+                            <div class="inserirInput">
+                                <input placeholder="Email" oninput="validarEmail()" type="text" id="ipt_email">
+                            </div>
+                            <div class="msgErro" id="div_msgEmail"></div>
                         </div>
 
                         <div class="containerInput">
                             <div class="inserirInput">
 
-                                <select id="ipt_genero">
-                                    <option>Escolher Gênero</option>
+                                <select onclick="validarGenero()" id="ipt_genero">
+                                    <option value="#">Escolher Gênero</option>
                                     <option value="masculino">Masculino</option>
                                     <option value="feminino">Feminino</option>
                                     <option value="NULL">Prefiro não informar</option>
                                 </select>
-                                <br>
                             </div>
-                            <div id="div_msgGenero"><br></div>
+                            <div class="msgErro" id="div_msgGenero"></div>
                         </div>
+                    </div>
+
+                    <div class="setor">
 
                         <div class="containerInput">
                             <div class="inserirInput">
-                                <input placeholder="Confirmar Senha" oninput="validarConfirmarSenha()" type="password"
-                                    id="ipt_confirmarSenha">
-                                <br>
+                                <input placeholder="Senha" oninput="validarSenha()" type="password" id="ipt_senha">
                             </div>
-                            <div id="div_msgConfirmarSenha"><br></div>
+                            <div class="msgErro" id="div_msgSenha"></div>
                         </div>
+
+
+
+                        <div class="containerInput">
+                            <div class="inserirInput">
+                                <input placeholder="Confirmar Senha" oninput="validarConfirmarSenha()" type="password" id="ipt_confirmarSenha">
+                            </div>
+                            <div class="msgErro" id="div_msgConfirmarSenha"></div>
+                            
+                        </div>
+                        <button id="btn_senha" onclick="visualizarSenha()">👁️</button>
                     </div>
                 </div>
 
                 <br>
 
-                <button onclick="cadastrar()">Cadastrar</button>
+                <button class="btn_cadastrar" onclick="cadastrar()">Cadastrar</button>
             </div>
             <div class="imgCadastro">
                 <img src="./assets/imgs/fotoRascunho.jpg">

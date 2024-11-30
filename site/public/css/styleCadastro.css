@@ -4,6 +4,8 @@
     cursor: pointer;
     font-size: 16px;
     padding: 1px;
+    align-self: start;
+    width: 16px;
 }
 
 main {
@@ -30,7 +32,7 @@ main {
 }
 
 .tituloCadastro {
-    width: 80%;
+    /* width: 80%; */
 
     background: linear-gradient(to left, #A8862B, #D4AF37,  #D4AF37, #F0D58C);
 
@@ -58,30 +60,61 @@ main {
     width: 50%;
 }
 
-.lado {
-    width: 48%;
+.setor {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 16px;
+
+    /* justify-content: space-around; */
 }
 
 .conteudoCadastro input, select {
-    width: 160px;
-    height: 24px;
+    width: 200px;
+    height: 32px;
 
     padding: 1%;
+
+    background-color: #FFFAE3;
+    justify-self: center;
+    align-self: center;
+    border-radius: 1px;
+    box-shadow: none;
+    border: 0.5px solid #524632;
+    border-bottom: 2px solid #524632;
+
+    color: #524632;
+}
+
+.conteudoCadastro input::placeholder, select::placeholder {
+    color: #524632;
+}
+
+.msgErro {
+    text-align: center;
+    line-height: 15px;
+    font-size: 14px;
+    margin-top: 4px;
+    color: #524632;
 }
 
 .conteudoCadastro .containerInput {
-    display: row;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
 
-    justify-content: space-between;
-    width: 50%;
+    width: 46%;
+    height: 100%;
 }
 
 .inputs {
+    width: 100%;
+    height: 100%;
     padding: 3% 1%;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: auto;
     justify-content: space-around;
 }
@@ -90,9 +123,11 @@ main {
     display: flex;
     flex-direction: column;
 
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
 
-    width: 50%;
+    width: 100%;
+    /* height: 60px; */
 
     font-size: 20px;
 }
@@ -115,4 +150,8 @@ main {
 
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+}
+
+.btnCadastrar button{
+    color: #524632;
 }

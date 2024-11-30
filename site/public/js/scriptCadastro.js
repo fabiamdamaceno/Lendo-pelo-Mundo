@@ -16,7 +16,7 @@ function validarNome() {
 
     } else {
         ipt_nome.style.border = "2px solid green";
-        div_msgNome.innerHTML = "<br>";
+        div_msgNome.innerHTML = "";
         qtdValidacoes++;
     }
 }
@@ -35,7 +35,7 @@ function validarSobrenome() {
 
     } else {
         ipt_sobrenome.style.border = "2px solid green";
-        div_msgSobrenome.innerHTML = "<br>";
+        div_msgSobrenome.innerHTML = "";
         qtdValidacoes++;
     };
 };
@@ -56,7 +56,7 @@ function validarEmail() {
 
     } else {
         ipt_email.style.border = "2px solid green";
-        div_msgEmail.innerHTML = "<br>";
+        div_msgEmail.innerHTML = "";
         qtdValidacoes++;
 
     };
@@ -70,7 +70,7 @@ function validarSenha() {
     div_msgSenha.innerHTML = `
     Deve conter pelos menos: <br>
     <span id="span_senhaTamanho"> 8 caracteres </span> <br>
-    <span id="span_senhaEspecial"> Um caractere especial (e.g.: !, @, #, $) </span> <br>
+    <span id="span_senhaEspecial"> Um caractere especial (!, @, #, $) </span> <br>
     <span id="span_senhaNumero"> Um número </span> <br>
     <span id="span_senhaMaiuscula"> Uma letra maiúscula </span> <br>
     <span id="span_senhaMinuscula"> Uma letra minúscula </span> <br>
@@ -181,7 +181,22 @@ function validarConfirmarSenha() {
 
     } else {
         ipt_confirmarSenha.style.border = "2px solid green";
-        div_msgConfirmarSenha.innerHTML = "<br>";
+        div_msgConfirmarSenha.innerHTML = "";
+        qtdValidacoes++;
+    };
+};
+
+function validarGenero() {
+    var genero = ipt_genero.value;
+
+    if (genero == '#') {
+        ipt_genero.style.border = "2px solid red";
+        div_msgGenero.innerHTML = "Selecione uma opção válida";
+
+    } else {
+
+        ipt_genero.style.border = "2px solid green";
+        div_msgGenero.innerHTML = "";
         qtdValidacoes++;
     };
 };
@@ -223,8 +238,8 @@ function cadastrarBanco() {
         },
         body: JSON.stringify({
             nomeServer: nomeBanco,
-            sobrenomeServer: sobrenomeBanco, 
-            generoServer :generoBanco,
+            sobrenomeServer: sobrenomeBanco,
+            generoServer: generoBanco,
             emailServer: emailBanco,
             senhaServer: senhaBanco
         }),
@@ -238,6 +253,7 @@ function cadastrarBanco() {
 
                 cardAviso.innerHTML =
                     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                cardAviso.style.color = "white"
 
                 setTimeout(() => {
                     window.location = "../login.html";
@@ -261,6 +277,7 @@ function cadastrar() {
     validarNome();
     validarSobrenome();
     validarEmail();
+    validarGenero();
     validarSenha();
     validarConfirmarSenha();
 
@@ -269,7 +286,7 @@ function cadastrar() {
         alert('Preencha todos os campos');
     } else {
 
-        if (qtdValidacoes != 5) {
+        if (qtdValidacoes != 6) {
             alert('Preencha corretamente todos os campos')
         } else {
             cadastrarBanco();
