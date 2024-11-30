@@ -44,13 +44,22 @@ var livrosOut = 0;
 var livrosNov = 0;
 var livrosDez = 0;
 
-// Variaves KPIs
+// Variaveis KPIs
 
 var livrosLidos;
 var mediaLivrosLidos;
 var autorPreferido;
 var genPreferido;
 var paisPreferido;
+
+// Variaveis Conquistas
+
+var conquistas = {
+    nomeConquista: [],
+    descricaoConquista: []
+};
+var conquistasQtd = 0;
+
 
 
 
@@ -249,7 +258,7 @@ function gerarGraficos() {
                 var qtdGeneroPreferido = 0;
                 var generoMaisLido;
 
-                for(var i = 0; i < totalLivros; i++) {
+                for (var i = 0; i < totalLivros; i++) {
                     var autorIndex = resposta[i].autor;
                     var genIndex = resposta[i].genLiterario;
                     var posicaoAutorLista = autores.indexOf(autorIndex);
@@ -264,7 +273,7 @@ function gerarGraficos() {
 
                     }
 
-                    if(qtdLivrosAutor[posicaoAutorLista] > qtdAutorPreferido) {
+                    if (qtdLivrosAutor[posicaoAutorLista] > qtdAutorPreferido) {
                         qtdAutorPreferido = qtdLivrosAutor[posicaoAutorLista]
                         autorMaisLido = autorIndex;
                     }
@@ -279,7 +288,7 @@ function gerarGraficos() {
 
                     }
 
-                    if(qtdLivrosGenero[posicaoGeneroLista] > qtdGeneroPreferido) {
+                    if (qtdLivrosGenero[posicaoGeneroLista] > qtdGeneroPreferido) {
                         qtdGeneroPreferido = qtdLivrosGenero[posicaoGeneroLista]
                         generoMaisLido = genIndex;
                     }
@@ -289,23 +298,137 @@ function gerarGraficos() {
 
                 console.log(autores, qtdLivrosAutor)
 
-                    autorPreferido = autorMaisLido;
+                autorPreferido = autorMaisLido;
 
-                    
-                    genPreferido = generoMaisLido;
 
-                    paisPreferido = paisNome1;
+                genPreferido = generoMaisLido;
+
+                paisPreferido = paisNome1;
 
                 plotarKPIs();
 
+                var listaPaisNome = [];
+                var listaPaisQtd = [];
 
-                // 3 brasileiros
+                var listaAutorNome = [];
+                var listaAutorQtd = [];
+
+                var listaGenAutorNome = [];
+                var listaGenAutorQtd = [];
+
+
+                for (var i = 0; i < resposta.length; i++) {
+                    var paisNomeAtual = resposta[i].paisAutor;
+                    var posicaoPais = listaPaisNome.indexOf(paisNomeAtual);
+
+                    if (posicaoPais == -1) {
+                        listaPaisNome.push(paisNomeAtual);
+                        listaPaisQtd.push(1);
+
+                    } else {
+                        listaPaisQtd[posicaoPais]++;
+
+                    }
+
+                    var AutorNomeAtual = resposta[i].autor;
+                    var posicaoAutor = listaAutorNome.indexOf(AutorNomeAtual);
+
+                    if (posicaoAutor == -1) {
+                        listaAutorNome.push(AutorNomeAtual);
+                        listaAutorQtd.push(1);
+
+                    } else {
+                        listaAutorQtd[posicaoAutor]++;
+
+                    }
+
+                    var GenAutorNomeAtual = resposta[i].genAutor;
+                    var posicaoGenAutor = listaGenAutorNome.indexOf(GenAutorNomeAtual);
+
+                    if (posicaoGenAutor == -1) {
+                        listaGenAutorNome.push(GenAutorNomeAtual);
+                        listaGenAutorQtd.push(1);
+
+                    } else {
+                        listaGenAutorQtd[posicaoGenAutor]++;
+
+                    }
+                };
+
+
+                // Validação Conquistas
+
+                if (listaPaisQtd[listaPaisNome.indexOf('Reino Unido')] >= 3) {
+
+                    conquistas.nomeConquista.push('Tomador de chá');
+                    conquistas.descricaoConquista.push('Leia mais de 3 livros ingleses');
+                    conquistasQtd++;
+                };
+                
+                if (listaPaisQtd[listaPaisNome.indexOf('Estados Unidos')] >= 3) {
+
+                    conquistas.nomeConquista.push('American');
+                    conquistas.descricaoConquista.push('Leia mais de 3 livros dos Estados Unidos');
+                    conquistasQtd++;
+                };
+                
+                if (listaPaisQtd[listaPaisNome.indexOf('Rússia')] >= 3) {
+
+                    conquistas.nomeConquista.push('Soviete');
+                    conquistas.descricaoConquista.push('Leia mais de 3 livros russos');
+                    conquistasQtd++;
+                };
+                
+                if (listaPaisQtd[listaPaisNome.indexOf('Japão')] >= 1) {
+
+                    conquistas.nomeConquista.push('Descobridor Nippon');
+                    conquistas.descricaoConquista.push('Leia 1 livro japonês');
+                    conquistasQtd++;
+                };
+                
+                if (listaPaisQtd[listaPaisNome.indexOf('Tchéquia')] >= 1) {
+
+                    conquistas.nomeConquista.push('Visitante de Praga');
+                    conquistas.descricaoConquista.push('Leia 1 livro tcheco');
+                    conquistasQtd++;
+                };
+                
+                if (
+                    (
+                        listaPaisQtd[listaPaisNome.indexOf('Brasil')] +
+                        listaPaisQtd[listaPaisNome.indexOf('Colômbia')] +
+                        listaPaisQtd[listaPaisNome.indexOf('Uruguai')]
+                    ) >= 3) {
+
+                    conquistas.nomeConquista.push('Rapaz Latino-Americano');
+                    conquistas.descricaoConquista.push('Leia mais de 3 livros latino-americanos');
+                    conquistasQtd++;
+                };
+                    
+                if (listaAutorQtd[listaAutorNome.indexOf('J.K. Rowling')] >= 7) {
+                    
+                    conquistas.nomeConquista.push('PotterHead');
+                    conquistas.descricaoConquista.push('Leia a saga completa de Harry Potter');
+                    conquistasQtd++;
+                };
+                
+                if (listaGenAutorQtd[listaGenAutorNome.indexOf('feminino')] >= 5) {
+                        
+                    conquistas.nomeConquista.push('Aliado');
+                    conquistas.descricaoConquista.push('Leia mais de 5 escritos por autoras');
+                    conquistasQtd++;
+                };
+
+
+
+
                 // 3 americanos
                 // 3 ingleses
-                // 3 japoneses
-                // 3 russos
+                // 1 japones
+                // 1 theco - visita a praga
+                // 3 mulheres
+                // potterhead leia 7 livros de HP
 
-                // 3 
 
                 plotarConquistas();
 
@@ -320,7 +443,23 @@ function gerarGraficos() {
 }
 
 function plotarConquistas() {
-        alert('Ola')
+    var msgPainelConquistas = "";
+
+    for (var i = 0; i < conquistasQtd; i++) {
+        var nomeConquistaAtual = conquistas.nomeConquista[i];
+        var descricaoConquistaAtual = conquistas.descricaoConquista[i];
+
+        msgPainelConquistas +=
+            `
+                <tr>
+                    <td>${i + 1}</td>
+                    <td>${nomeConquistaAtual}</td>
+                    <td>${descricaoConquistaAtual}</td>
+                </tr>
+            `;
+    }
+
+    painelConquistas.innerHTML = msgPainelConquistas;
 }
 
 function plotarKPIs() {
