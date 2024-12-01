@@ -13,20 +13,23 @@ table {
 
 th, td, tr{
     padding: 1px 8px;
-    height: 50px;
+    height: 25px;
     width: 50px;
     justify-content: center;
     align-items: center;
     text-align: center;
     text-wrap: wrap;
+
+    border-color: #D4AF37;
+    color: black;
 }
 
 th {
-    border-bottom: 2px solid #524632;
+    border-bottom: 2px solid #D4AF37;
 }
 
 td {
-    border: 1px solid #524632;
+    border: 1px solid #A8862B;
 }
 
 /* Reescrevendo tamanho da Main */
@@ -48,7 +51,7 @@ main {
 
 main .lateral {
     width: 25vw;
-    height: 91.8%;
+    min-height: 100%;
     /* background-color: white; */
     border-right: 2px solid #524632;
 
@@ -59,7 +62,7 @@ main .lateral {
 
 .lateral>.titulo {
     /* width: 80%; */
-    /* height: 10.5vh; */
+    height: 12%;
 
     align-content: center;
 
@@ -79,9 +82,9 @@ main .lateral {
 .lateral .kpis {
     /* background-color: slateblue; */
     width: 100%;
+    height: 25%;
     padding: 1% 2%;
     /* color: white; */
-    min-height: 25%;
 
     font-size: 20px;
     line-height: 30px;
@@ -97,9 +100,64 @@ main .lateral {
 }
 
 .lateral .painel {
-    background-color: aquamarine;
-    min-height: 65%;
+    min-height: 58%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2%;
 }
+
+.painel .conquistas {
+    height: 98%;
+    width: 94%;
+    padding: 2%;
+
+    background-color: #FFFAE3;
+    /* border: 1px solid #A8862B; */
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    box-shadow:  0px 0px 2px 0.25px black;
+    border-radius: 12px;
+}
+
+/* Estização header do leituras */
+
+.painel .header{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1% 5%;
+    margin-bottom: 2%;
+
+    height: 16%;
+
+}
+
+.header h2 {
+    color: #524632;
+}
+
+/* Estilização Conquistas */
+
+
+.painel .lista {
+    box-shadow: inset 0px 0px 2px 0.25px black;
+    border-radius: 8px;
+    height: 40vh;
+    overflow-y: auto;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: white;  
+}
+
 
 /* Dashs */
 
@@ -163,27 +221,4 @@ main .centro {
     flex-direction: row;
 }
 
-
-
-/* Estilização Leituras */
-
-.lista {
-    box-shadow: inset 0px 0px 2px 0.5px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    height: 30vh;
-    overflow-y: auto;
-}
-
-/* Estização header do leituras */
-
-.painel .header{
-    display: flex;
-    flex-direction: column;
-    
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 1% 5%;
-    margin-bottom: 2%;
-}
 
