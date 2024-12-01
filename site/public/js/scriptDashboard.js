@@ -219,7 +219,7 @@ function gerarGraficos() {
 
                 };
 
-                c3_livrosPais = [paisQtd2, paisQtd1, paisQtd3, paisQtd1 * 1.5];
+                c3_livrosPais = [paisQtd2, paisQtd1, paisQtd3, paisQtd1 * 1.2];
                 c3_paises = [paisNome2, paisNome1, paisNome3];
 
                 var totalLivros = Number(resposta.length);
