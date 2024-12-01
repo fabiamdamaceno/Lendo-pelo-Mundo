@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
 
     <script src="./js/scriptSimulador.js"></script>
 </head>
+
 <body onload="verificarLogin()">
 
     <header>
@@ -31,26 +33,83 @@
     </header>
 
     <main>
-        Cálculo de Leitura <br>
 
-<br>
-        <div id="simuladorTexto" style="display: none">
-            Sobretudo não minta a si mesmo. Aquele que mente a si mesmo e escuta sua própria mentira vai ao ponto de não mais distinguir a verdade, nem em si, nem em torno de si; perde pois o respeito de si e dos outros. Não respeitando ninguém, deixa de amar; e para se ocupar, e para se distrair, na ausência de amor, entrega-se às paixões e aos gozos grosseiros; chega até a bestialidade em seus vícios, e tudo isso provém da mentira contínua a si mesmo e aos outros. Aquele que mente a si mesmo pode ser o primeiro a ofender-se
+        <section class="container">
+
+            <div class="conteudo">
+
+                <div class="titulo">
+                    <div class="parafusos">
+                        <div class="parafusoFora parafusoFora1">
+                            <span class="parafuso">+</span>
+                        </div>
+                        <div class="parafusoFora parafusoFora2">
+                            <span class="parafuso">+</span>
+                        </div>
+                    </div>
+                    <h1>Cálculo de Leitura</h1>
+                    <div class="parafusos">
+                        <div class="parafusoFora parafusoFora1">
+                            <span class="parafuso">+</span>
+                        </div>
+                        <div class="parafusoFora parafusoFora2">
+                            <span class="parafuso">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="simulador">
+                    <div class="lateral">
+
+                        <div class="explicacao">
+                            <p>
+                                Nesse simulador, calcularemos a sua velocidade de leitura. Ao clicar em <b>Começar</b>, um texto aparecerá ao lado. Ao terminar de ler, clique em <b>Terminar</b>. 
+                            </p>
+                            <p>
+                                Com a sua velocidade de leitura, o algoritmo fará alguns cálculos interessantes, que, espero eu, te motive a ler mais!
+                            </p>
+                        </div>
+                        <div class="botoes">
+                            <button onclick="comecar()">Começar</button>
+                            <button onclick="terminar()">Terminar</button>
+                        </div>
+                        <div class="contador">
+                            <div id="div_msgTempo">00:00</div>
+                        </div>
+                    </div>
+                    <div class="centro">
+                        <div class="cardCitacao">
+                            <div id="simuladorTexto" style="display: none">
+                                <p>
+                                    Sobretudo não minta a si mesmo. Aquele que mente a si mesmo e escuta sua própria
+                                    mentira vai ao ponto de não
+                                    mais distinguir a verdade, nem em si, nem em torno de si; perde pois o respeito de
+                                    si e dos outros. Não
+                                    respeitando ninguém, deixa de amar; e para se ocupar, e para se distrair, na
+                                    ausência de amor, entrega-se às
+                                    paixões e aos gozos grosseiros; chega até a bestialidade em seus vícios, e tudo isso
+                                    provém da mentira
+                                    contínua a si mesmo e aos outros. Aquele que mente a si mesmo pode ser o primeiro a
+                                    ofender-se.
+                                </p>
+                            </div>
+                            <div id="div_msgResultado1"></div>
+                            <div id="div_msgResultado2"></div>
+                        </div>
+                    </div>
+                </div>
 
 
-        </div>
-        
-        <div id="div_msgTempo"></div>
-<br>
-
-        <button onclick="comecar()">Começar</button>
-        <button onclick="terminar()">Terminar</button>
 
 
-<br>
 
-        <div id="div_msgResultado1"></div>
-        <div id="div_msgResultado2"></div>
+
+
+
+
+
+            </div>
+        </section>
 
     </main>
 
@@ -59,8 +118,6 @@
             <img src="./assets/imgs/logoPura.png">
         </div>
         <nav class="secoes">
-            <!-- <a>A ESCREVER</a>
-            <a>A ESCREVER</a> -->
         </nav>
         <nav class="criador">
             <span>Fábiam Damaceno</span>
@@ -76,4 +133,5 @@
     </footer>
 
 </body>
+
 </html>

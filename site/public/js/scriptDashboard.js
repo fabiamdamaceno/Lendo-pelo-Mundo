@@ -225,7 +225,7 @@ function gerarGraficos() {
 
                 };
 
-                c1_livrosMes = [livrosJan, livrosFev, livrosMar, livrosAbr, livrosMaio, livrosJun, livrosJul, livrosAgo, livrosSet, livrosOut, livrosNov, livrosDez, mesMaisLidoQtd*1.5];
+                c1_livrosMes = [livrosJan, livrosFev, livrosMar, livrosAbr, livrosMaio, livrosJun, livrosJul, livrosAgo, livrosSet, livrosOut, livrosNov, livrosDez, mesMaisLidoQtd*1.2];
 
                 c2_autorGeneroLivros = [livrosHomem, livrosMulher];
 
@@ -514,7 +514,9 @@ function plotarGraficos() {
             datasets: [{
                 label: 'Livros',
                 data: c1_livrosMes,
-                borderWidth: 1
+                borderWidth: 1,
+                backgroundColor: '#74BD77',
+                borderColor: '#4A9A64'
             }]
         },
         options: {
@@ -541,7 +543,6 @@ function plotarGraficos() {
                         font: {
                             size: 14,
                             family: 'Libre Caslon Text',
-                            weight: '600'
                         }
                     }
                 },
@@ -553,7 +554,7 @@ function plotarGraficos() {
                         color: 'black',
                         font: {
                             family: 'Libre Caslon Text',
-                            weight: '600'
+                            size: 14
                         }
                     },
                     grid: {
@@ -571,7 +572,9 @@ function plotarGraficos() {
             datasets: [{
                 label: 'Livros Lidos',
                 data: c2_autorGeneroLivros,
-                borderWidth: 1
+                borderWidth: 3,
+                backgroundColor: ['#3597DE', '#FF6B6B'],
+                borderColor: ['#FFFAE3', '#FFFAE3']
             }]
         },
         options: {
@@ -594,7 +597,6 @@ function plotarGraficos() {
                         font: {
                             size: 14,
                             family: 'Libre Caslon Text',
-                            weight: '600'
                         }
                     }
                 }
@@ -610,7 +612,9 @@ function plotarGraficos() {
                 display: false,
                 label: 'Livros livros',
                 data: c3_livrosPais,
-                borderWidth: 1
+                borderWidth: 1,
+                backgroundColor: ['#A1A1A1', '#D4AF37', '#B78C4A'],
+                borderColor: ['#C0C0C0', '#FFD700', '#CD7F32']
             }]
         },
         options: {
@@ -637,7 +641,6 @@ function plotarGraficos() {
                         font: {
                             size: 14,
                             family: 'Libre Caslon Text',
-                            weight: '600'
                         }
                     }
                 },
@@ -650,7 +653,6 @@ function plotarGraficos() {
                         font: {
                             size: 14,
                             family: 'Libre Caslon Text',
-                            weight: '600'
                         }
                     },
                     grid: {
@@ -669,12 +671,16 @@ function plotarGraficos() {
                 {
                     label: 'Minhas',
                     data: c4_livroGeneroLiterario,
-                    borderWidth: 2
+                    borderWidth: 2,
+                    backgroundColor: 'RGBA(163, 201, 248, 0.7)',
+                    borderColor: '#3597DE',
                 },
                 {
                     label: 'População Geral',
                     data: c4_resultadosPesquisa,
-                    borderWidth: 2
+                    borderWidth: 2,
+                    backgroundColor: 'RGBA(255, 179, 179, 0.7)',
+                    borderColor: '#FF6B6B'
                 }
             ]
         },
@@ -697,7 +703,6 @@ function plotarGraficos() {
                     labels: {
                         font: {
                             size: 14,
-                            weight: '600',
                             family: 'Libre Caslon Text'
                         }
                     }

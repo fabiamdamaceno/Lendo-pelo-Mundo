@@ -1,0 +1,170 @@
+
+/* Geral */
+
+h1 {
+    font-size: 32px;
+    margin: 1vh 0.5vh;
+}
+
+button {
+    background-color: #C2B280;
+
+    color: black;
+    font-size: 16px;
+
+    border: 1px solid #524632;
+    box-shadow: 0px 0px 0.1px 0.1px black;
+
+    /* box-shadow: 0px 0px 2px 0.5px black; */
+    width: 45%;
+    height: 20px;
+    align-self: center;
+
+    margin-bottom: 4px;
+}
+
+button:hover {
+    color: white;
+}
+
+/* Estilização página */
+
+main {
+    background-color: #C2B280;
+}
+
+section {
+    margin: 0px;
+    padding: 0.5%;
+
+    background-color: #524632   ;
+    border-radius: 12px;
+    border: 2.5px solid #413725;
+    box-shadow: 0px 0px 2px 0.25px black;
+
+    width: 90%;
+    height: 78.6vh;
+}
+
+.conteudo {
+    /* background-color: #F0D58C; */
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: center; */
+    align-items: center;
+}
+
+section .titulo{
+    background: linear-gradient(to left, #A8862B, #D4AF37,  #D4AF37, #F0D58C);
+
+    width: 308px;
+
+    margin-bottom: 12px;
+    padding: 0.2% 0.2%;
+    border: 8px solid #524632;
+    box-shadow: 3px 2px 5px 1px black;
+    display: flex;
+}
+
+section .simulador {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: space-around;
+
+    /* background-color: #A09268; */
+}
+
+.simulador .lateral{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 1%;
+
+    width: 24%;
+
+    font-size: 20px;
+    
+
+    background-color: #FFFAE3;
+
+    border-radius: 12px;
+}
+
+.lateral .explicacao p{
+    font-size: 22px;
+}
+
+.lateral .botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 90%;
+
+    margin-top: 3%;
+}
+
+.lateral .contador {
+    background-color: #DADADA;
+
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+
+    padding: 3% 6%;
+}
+
+.simulador .centro {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFAE3;
+    /* box-shadow: inset 0px 0px 4px 1px #A8862B; */
+    border: 1.5px solid #A8862B;
+    border-radius: 12px;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 74%;
+    height: 100%;
+}
+
+.centro .cardCitacao {
+    background-color: #FCFCFC;
+    margin: 1% 2%;
+    padding: 1% 1.5%;
+
+    font-size: 24px;
+    text-align: justify;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border: 2px solid #DADADA;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px 1px black;
+
+    width: 90%;
+    height: 95%;
+
+    display: flex;
+
+    justify-content: space-around;
+}
+
+#div_msgResultado2>p{
+    font-size: 14px !important;
+    color: #2E2E2E;
+}
+
