@@ -521,7 +521,14 @@ function plotarGraficos() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Leitura Anual'
+                    text: 'Leitura Anual',
+                    color: '#A8862B',
+                    font: {
+                        size: 20,
+                        family: 'Libre Caslon Text',
+                        weight: 'bold'
+
+                    }
                 }
             },
             scales: {
@@ -529,14 +536,28 @@ function plotarGraficos() {
                     beginAtZero: true,
                     title: {
                         display: true,
-                        text: 'Livros Lidos'
+                        text: 'Livros Lidos',
+                        color: 'black',
+                        font: {
+                            size: 14,
+                            family: 'Libre Caslon Text',
+                            weight: '600'
+                        }
                     }
                 },
                 x: {
                     beginAtZero: true,
                     title: {
                         display: true,
-                        text: 'Meses'
+                        text: 'Meses',
+                        color: 'black',
+                        font: {
+                            family: 'Libre Caslon Text',
+                            weight: '600'
+                        }
+                    },
+                    grid: {
+                        display: false
                     }
                 }
             }
@@ -557,7 +578,25 @@ function plotarGraficos() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Gênero dos Autores Lidos'
+                    text: 'Gênero dos Autores Lidos',
+                    color: '#A8862B',
+                    font: {
+                        size: 20,
+                        family: 'Libre Caslon Text',
+                        weight: 'bold'
+
+                    }
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        font: {
+                            size: 14,
+                            family: 'Libre Caslon Text',
+                            weight: '600'
+                        }
+                    }
                 }
             },
         }
@@ -568,6 +607,7 @@ function plotarGraficos() {
         data: {
             labels: c3_paises,
             datasets: [{
+                display: false,
                 label: 'Livros livros',
                 data: c3_livrosPais,
                 borderWidth: 1
@@ -577,7 +617,14 @@ function plotarGraficos() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Países Preferidos'
+                    text: 'Preferidos',
+                    color: '#A8862B',
+                    font: {
+                        size: 20,
+                        family: 'Libre Caslon Text',
+                        weight: 'bold'
+
+                    }
                 }
             },
             scales: {
@@ -585,14 +632,29 @@ function plotarGraficos() {
                     beginAtZero: true,
                     title: {
                         display: true,
-                        text: 'Livros lidos por país'
+                        text: 'Livros lidos',
+                        color: 'black',
+                        font: {
+                            size: 14,
+                            family: 'Libre Caslon Text',
+                            weight: '600'
+                        }
                     }
                 },
                 x: {
                     beginAtZero: true,
                     title: {
                         display: true,
-                        text: 'Países'
+                        text: 'Países',
+                        color: 'black',
+                        font: {
+                            size: 14,
+                            family: 'Libre Caslon Text',
+                            weight: '600'
+                        }
+                    },
+                    grid: {
+                        display: false
                     }
                 }
             }
@@ -605,12 +667,12 @@ function plotarGraficos() {
             labels: c4_generoLiterario,
             datasets: [
                 {
-                    label: 'Suas Preferências',
+                    label: 'Minhas',
                     data: c4_livroGeneroLiterario,
                     borderWidth: 2
                 },
                 {
-                    label: 'Preferências Pesquisa',
+                    label: 'População Geral',
                     data: c4_resultadosPesquisa,
                     borderWidth: 2
                 }
@@ -620,10 +682,35 @@ function plotarGraficos() {
             plugins: {
                 title: {
                     display: true,
-                    text: 'Perfil do Leitor'
+                    text: 'Preferências de Gêneros',
+                    color: '#A8862B',
+                    font: {
+                        size: 20,
+                        family: 'Libre Caslon Text',
+                        weight: 'bold'
+
+                    }
+                },
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            size: 14,
+                            weight: '600',
+                            family: 'Libre Caslon Text'
+                        }
+                    }
+                }
+            },
+            scales: {
+                r: {
+                    ticks: {
+                        display: false
+                    },
                 }
             }
-        }
+        },
     });
 };
 
