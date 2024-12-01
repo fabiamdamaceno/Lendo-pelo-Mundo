@@ -1,56 +1,53 @@
-#btn_senha {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 1px;
+.imgSign {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
-#btn_senha {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 1px;
+.imgSign img {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
-main {
-    height: 100vh;
-}
-
-/* Container Cadastro */
-
-.containerCadastro {
-    background-color: #524632;
-    margin: auto;
-
-    display: flex;
-    height: 500px;
-    width: 1000px;
-}
-
-.inputs {
+.logar {
     display: flex;
     flex-direction: column;
 
-    justify-content: center;
-    align-items: left;
     justify-content: space-around;
-    padding: 2%;
-    margin: auto;
-    width: 50%;
-}
+    /* align-items: center; */
 
-.inputs input, select {
-    width: 160px;
-}
-
-.imgCadastro {
-    height: 500px;
-    width: 50%;
-}
-
-.imgCadastro img {
-    height: 100%;
     width: 100%;
+    height: 50%;
 }
+
+.logar input {
+    height: 50px;
+    width: 250px;
+}
+
+.logar .containerInput, .inserirInput {
+    width: auto;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* #btn_senha {
+
+} */
+
+.containerInput {
+    flex-direction: row !important;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.inserirInput {
+    width: auto !important;
+    margin-left: 16px;
+}
+
+#ipt_email {
+    margin-right: 16px;
+}
+

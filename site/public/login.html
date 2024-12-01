@@ -1,42 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styleSign.css">
     <link rel="stylesheet" href="./css/styleLogin.css">
 
     <script src="./js/scriptLogin.js"></script>
 </head>
+
 <body>
-    
+
     <main>
 
-        <div class="containerCadastro">
-            <div class="inputs">
-
-                Email:
-                <input type="text" id="ipt_email"> <br>
-                
-                Senha:
-                <input type="password" id="ipt_senha">
-                <button id="btn_senha" onclick="visualizarSenha()">👁️</button>
-                <br>
-                <div id="div_aviso"></div> <br>
-                
-                <br>
-                
-                <button onclick="recuperarSenha()">Esqueci minha senha</button>
-                <button onclick="entrar()">Entrar</button>
-
+        <div class="container">
+            <div class="imgSign">
+                <img src="./assets/imgs/imgSign.jpg">
             </div>
-            <div class="imgCadastro">
-                <img src="./assets/imgs/fotoRascunho.jpg">
+            <div class="conteudo">
+                <div class="titulo">
+                    <div class="parafusos">
+                        <div class="parafusoFora parafusoFora1">
+                            <span class="parafuso">+</span>
+                        </div>
+                        <div class="parafusoFora parafusoFora2">
+                            <span class="parafuso">+</span>
+                        </div>
+                    </div>
+                    <h2>Entrar</h2>
+                    <div class="parafusos">
+                        <div class="parafusoFora parafusoFora1">
+                            <span class="parafuso">+</span>
+                        </div>
+                        <div class="parafusoFora parafusoFora2">
+                            <span class="parafuso">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputs">
+
+                    <div class="logar">
+                        <div class="containerInput">
+                            <div class="inserirInput">
+                                <input placeholder="Email" type="text" id="ipt_email">
+                            </div>
+                        </div>
+                        
+                        <div class="containerInput">
+                            <div class="inserirInput">
+
+                                <input placeholder="Senha" type="password" id="ipt_senha">
+                            </div>
+                            <button id="btn_senha" onclick="visualizarSenha()">👁️</button>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+                <button onclick="window.location.href=`cadastro.html`;">Cadastrar-se</button>
+                <button onclick="entrar()">Entrar</button>
+                
             </div>
         </div>
+
+        <div id="div_aviso"></div>
     </main>
 
 </body>
+
 </html>

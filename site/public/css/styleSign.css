@@ -1,0 +1,154 @@
+main {
+    height: 100vh;
+
+    background-image: url(../assets/imgs/fundoTelaFormatado.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+button {
+    background-color: #FFFAE3;
+
+    color: black;
+    font-size: 16px;
+
+    border: 1px solid #524632;
+    box-shadow: 0px 0px 0.1px 0.1px black;
+
+    /* box-shadow: 0px 0px 2px 0.5px black; */
+    width: 240px;
+    height: 35px;
+    align-self: center;
+
+    margin-bottom: 4px;
+}
+
+button:hover {
+    color: #D4AF37;
+}
+
+/* Container Cadastro */
+
+.container {
+    background-color: #C2B280;
+    margin: auto;
+
+    display: flex;
+    height: 500px;
+    width: 1000px;
+
+    border-radius: 12px;
+
+    box-shadow: 0px 0px 5px 1px black;
+}
+
+.titulo {
+    /* width: 80%; */
+
+    background: linear-gradient(to left, #A8862B, #D4AF37,  #D4AF37, #F0D58C);
+
+    margin-bottom: 22px;
+    padding: 0.4% 0.4%;
+    border: 8px solid #524632;
+    box-shadow: 3px 2px 5px 1px black;
+    display: flex;
+
+    align-self: center;
+    justify-content: space-between  ;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: left;
+    justify-content: space-around;
+    padding: 1.5%;
+    margin: auto;
+
+    height: 100%;
+    width: 50%;
+
+}
+
+/* Conteudo */
+
+.conteudo input, select {
+    width: 200px;
+    height: 32px;
+
+    padding: 1%;
+
+    background-color: #FFFAE3;
+    justify-self: center;
+    align-self: center;
+    border-radius: 1px;
+    box-shadow: none;
+    border: 0.5px solid #524632;
+    border-bottom: 2px solid #524632;
+
+    color: #524632;
+}
+
+.conteudo input::placeholder, select::placeholder {
+    color: #524632;
+}
+
+.conteudo .containerInput {
+    display: flex;
+    flex-direction: column;
+
+    width: 46%;
+    height: 100%;
+}
+
+.inputs {
+    width: 100%;
+    height: 100%;
+    padding: 3% 1%;
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-around;
+
+}
+
+.conteudo .containerInput .inserirInput {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-content: center;
+
+    width: 100%;
+    /* height: 60px; */
+
+    font-size: 20px;
+}
+
+.inserirInput span {
+    width: 180px;
+}
+
+#btn_senha {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 1px;
+    width: 16px;
+}
+
+/* Imagem Lateral */
+
+.imgSign {
+    height: 500px;
+    width: 50%;
+}
+
+.imgSign img {
+    height: 100%;
+    width: 100%;
+}
