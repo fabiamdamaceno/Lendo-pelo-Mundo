@@ -43,6 +43,9 @@ var livrosSet = 0;
 var livrosOut = 0;
 var livrosNov = 0;
 var livrosDez = 0;
+var mesMaisLidoNome = '';
+var mesMaisLidoQtd = 0;
+var mesQtd;
 
 // Variaveis KPIs
 
@@ -59,7 +62,6 @@ var conquistas = {
     descricaoConquista: []
 };
 var conquistasQtd = 0;
-
 
 
 
@@ -106,44 +108,76 @@ function gerarGraficos() {
 
                     var mes = dataIndexParte[1];
 
+
+
                     switch (mes) {
                         case '01':
                             livrosJan++;
+                            mesQtd = livrosJan;
+
                             break;
                         case '02':
                             livrosFev++;
+                            mesQtd = livrosFev;
+
                             break;
                         case '03':
                             livrosMar++;
+                            mesQtd = livrosMar;
+
                             break;
                         case '04':
                             livrosAbr++;
+                            mesQtd = livrosAbr;
+
                             break;
                         case '05':
                             livrosMaio++;
+                            mesQtd = livrosMaio;
+
                             break;
                         case '06':
                             livrosJun++;
+                            mesQtd = livrosJun;
+
                             break;
                         case '07':
                             livrosJul++;
+                            mesQtd = livrosJul;
+
                             break;
                         case '08':
                             livrosAgo++;
+                            mesQtd = livrosAgo;
+
                             break;
                         case '09':
                             livrosSet++;
+                            mesQtd = livrosSet;
+
                             break;
                         case '10':
                             livrosOut++;
+                            mesQtd = livrosOut;
+
                             break;
                         case '11':
                             livrosNov++;
+                            mesQtd = livrosNov;
+
                             break;
                         case '12':
                             livrosDez++;
+                            mesQtd = livrosDez;
+
                             break;
                     };
+
+                    if (mesQtd > mesMaisLidoQtd) {
+                        mesMaisLidoQtd = mesQtd;
+                        mesMaisLidoNome = mes;
+                    };
+
 
                     // Tratamento Dados Gráfico 2
                     var genAutorIndex = resposta[i].genAutor;
@@ -191,7 +225,7 @@ function gerarGraficos() {
 
                 };
 
-                c1_livrosMes = [livrosJan, livrosFev, livrosMar, livrosAbr, livrosMaio, livrosJun, livrosJul, livrosAgo, livrosSet, livrosOut, livrosNov, livrosDez];
+                c1_livrosMes = [livrosJan, livrosFev, livrosMar, livrosAbr, livrosMaio, livrosJun, livrosJul, livrosAgo, livrosSet, livrosOut, livrosNov, livrosDez, mesMaisLidoQtd*1.5];
 
                 c2_autorGeneroLivros = [livrosHomem, livrosMulher];
 
@@ -364,35 +398,35 @@ function gerarGraficos() {
                     conquistas.descricaoConquista.push('Leia mais de 3 livros ingleses');
                     conquistasQtd++;
                 };
-                
+
                 if (listaPaisQtd[listaPaisNome.indexOf('Estados Unidos')] >= 3) {
 
                     conquistas.nomeConquista.push('American');
                     conquistas.descricaoConquista.push('Leia mais de 3 livros dos Estados Unidos');
                     conquistasQtd++;
                 };
-                
+
                 if (listaPaisQtd[listaPaisNome.indexOf('Rússia')] >= 3) {
 
                     conquistas.nomeConquista.push('Soviete');
                     conquistas.descricaoConquista.push('Leia mais de 3 livros russos');
                     conquistasQtd++;
                 };
-                
+
                 if (listaPaisQtd[listaPaisNome.indexOf('Japão')] >= 1) {
 
                     conquistas.nomeConquista.push('Descobridor Nippon');
                     conquistas.descricaoConquista.push('Leia 1 livro japonês');
                     conquistasQtd++;
                 };
-                
+
                 if (listaPaisQtd[listaPaisNome.indexOf('Tchéquia')] >= 1) {
 
                     conquistas.nomeConquista.push('Visitante de Praga');
                     conquistas.descricaoConquista.push('Leia 1 livro tcheco');
                     conquistasQtd++;
                 };
-                
+
                 if (
                     (
                         listaPaisQtd[listaPaisNome.indexOf('Brasil')] +
@@ -404,16 +438,16 @@ function gerarGraficos() {
                     conquistas.descricaoConquista.push('Leia mais de 3 livros latino-americanos');
                     conquistasQtd++;
                 };
-                    
+
                 if (listaAutorQtd[listaAutorNome.indexOf('J.K. Rowling')] >= 7) {
-                    
+
                     conquistas.nomeConquista.push('PotterHead');
                     conquistas.descricaoConquista.push('Leia a saga completa de Harry Potter');
                     conquistasQtd++;
                 };
-                
+
                 if (listaGenAutorQtd[listaGenAutorNome.indexOf('feminino')] >= 5) {
-                        
+
                     conquistas.nomeConquista.push('Aliado');
                     conquistas.descricaoConquista.push('Leia mais de 5 escritos por autoras');
                     conquistasQtd++;
