@@ -1,7 +1,8 @@
 var citacao = [];
+var idUsuario = sessionStorage.ID_USUARIO;
+
 function gerarLeituras() {
 
-    var idUsuario = sessionStorage.ID_USUARIO
 
     fetch(`/leituras/listar/${idUsuario}`).then(function (resposta) {
         if (resposta.ok) {
@@ -92,7 +93,7 @@ function adicionarLeitura() {
             Citação Preferida: ${citacaoPreferida}
         `);
 
-    fetch("/leituras/cadastrar", {
+    fetch(`/leituras/cadastrar/${idUsuario}`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

@@ -1,6 +1,7 @@
 var leiturasModel = require("../models/leiturasModel");
 
 function cadastrar(req, res) {
+    var idUsuario = req.params.idUsuario;
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var titulo = req.body.tituloServer;
     var rating = req.body.ratingServer;
@@ -31,7 +32,7 @@ function cadastrar(req, res) {
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo leiturasModel.js
-        leiturasModel.cadastrar(titulo, rating, autor, genAutor, pais, genLiterario, data, citacaoPreferida)
+        leiturasModel.cadastrar(idUsuario, titulo, rating, autor, genAutor, pais, genLiterario, data, citacaoPreferida)
             .then(
                 function (resultado) {
                     res.json(resultado);
