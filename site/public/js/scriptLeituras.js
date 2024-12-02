@@ -79,19 +79,17 @@ function adicionarLeitura() {
 
     if(genAutor == '#') {
         alert('Insira o Gênero do autor')
+    } else if(titulo == '') {
+        alert('Insira o titulo')
+    } else if(autor == '') {
+        alert('Insira o autor')
+    } else if(pais == '') {
+        alert('Insira o país')
+    } else if(genLiterario == '') {
+        alert('Insira o Genêro Literário')
+    } else if(data == '') {
+        alert('Insira a data')
     } else {
-
-    alert(`
-            Leitura Adicionada:
-            Título: ${titulo}
-            Rating: ${rating}
-            Autor: ${autor}
-            Genêro do Autor: ${genAutor}
-            País: ${pais}
-            Genêro Literário: ${genLiterario}
-            Data de Leitura: ${data}
-            Citação Preferida: ${citacaoPreferida}
-        `);
 
     fetch(`/leituras/cadastrar/${idUsuario}`, {
         method: "POST",

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Leituras</title>
 
     <link rel="stylesheet" href="./css/style.css">
@@ -36,14 +36,30 @@
             <div id="leituras" style="display: block" class="leituras">
                 <div class="header">
                     <div class="titulo">
+                        <div class="parafusos">
+                            <div class="parafusoFora parafusoFora1">
+                                <span class="parafuso">+</span>
+                            </div>
+                            <div class="parafusoFora parafusoFora2">
+                                <span class="parafuso">+</span>
+                            </div>
+                        </div>
                         <h1>Leituras</h1>
+                        <div class="parafusos">
+                            <div class="parafusoFora parafusoFora1">
+                                <span class="parafuso">+</span>
+                            </div>
+                            <div class="parafusoFora parafusoFora2">
+                                <span class="parafuso">+</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="adicionarLeitura">
                         <button onclick="mudarPainel('leituras')">Adicionar Leitura</button>
                     </div>
                 </div>
 
-                <div class="lista">
+                <div id="lista" class="lista">
                     <table>
                         <thead>
                             <tr>
@@ -62,21 +78,36 @@
                 </div>
             </div>
 
-            <div id="adicionarLeitura" style="display: none" class="adicionarLeitura">
+            <div id="adicionarLeitura" style="display: none;" class="adicionarLeitura">
                 <form>
-                    Título: <input type="text" id="ipt_titulo">
-                    Rating: <input type="text" id="ipt_rating">
-                    Autor: <input type="text" id="ipt_autor">
-                    Gênero Autor: 
+                    <div class="andar">
+
+                        <input placeholder="Título" type="text" id="ipt_titulo">
+                        <!-- <select id="ipt_rating">
+                            <option value="#">Escolher rating</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select> -->
+                        
+                        <input placeholder="Autor" type="text" id="ipt_autor">
                         <select id="ipt_genAutor">
                             <option value="#">Escolher Gênero</option>
                             <option value="masculino">Masculino</option>
                             <option value="feminino">Feminino</option>
                         </select>
-                    País: <input type="text" id="ipt_pais">
-                    Gênero Literário: <input type="text" id="ipt_genLiterario">
-                    Data de Leitura: <input type="date" id="ipt_data">
-                    Citação Preferida: <input type="text" id="ipt_citacaoPreferida">
+                    </div>
+                    <div class="andar">
+                        <input placeholder="País do Autor" type="text" id="ipt_pais">
+                        <input placeholder="Gênero Literário" type="text" id="ipt_genLiterario">
+                        <input type="date" id="ipt_data">
+                    </div>
+                    <div class="andar">
+                        <textarea placeholder="Citação Preferida" type="text" id="ipt_citacaoPreferida"></textarea>
+                    </div>
+
                     <button onclick="adicionarLeitura()">Adicionar Leitura</button>
                 </form>
             </div>

@@ -1,9 +1,30 @@
 var sec = 0;
+var secTotal = 0;
 var min = 0;
 var funcaoCronometro;
 
+var textos = 
+    [
+        `
+        <p>
+            Sobretudo não minta a si mesmo. Aquele que mente a si mesmo e escuta sua própria mentira vai ao ponto de não mais distinguir a verdade, nem em si, nem em torno de si; perde pois o respeito de si e dos outros. Não respeitando ninguém, deixa de amar; e para se ocupar, e para se distrair, na ausência de amor, entrega-se às paixões e aos gozos grosseiros; chega até a bestialidade em seus vícios, e tudo isso provém da mentira contínua a si mesmo e aos outros. Aquele que mente a si mesmo pode ser o primeiro a ofender-se
+        </p>`,
+        `
+        <p>
+            — Viver? Viver como? — perguntou a voz do espírito. — Sim, viver como vivi antes: bem, agradavelmente.
+        </p>
+        <p>
+            — Como viveste antes, bem e agradavelmente? — perguntou a voz. E ele começou a examinar na imaginação os melhores momentos da sua vida agradável. Mas, fato estranho, todos estes momentos melhores de uma vida agradável pareciam agora completamente diversos do que pareceram então. Tudo, exceto as primeiras recordações da infância. Lá, na infância, existia algo realmente agradável, e com que se poderia viver, se aquilo voltasse. Mas não existia mais o homem que tivera aquela experiência agradável: era como que a recordação sobre alguma outra pessoa.'
+        </p>
+        `,
+        `
+            Foi então que entendeu as borboletas amarelas que precediam as aparições de Maurício Babilônia. Vira-as antes, sobretudo na oficina mecânica, e pensara que estavam fascinadas pelo cheiro da pintura. Alguma vez tê-las-ia sentido voejar sobre a sua cabeça na penumbra do cinema. Mas quando Mauricio Babilônia começou a persegui-la como um espectro que só ela identificava na multidão, compreendeu que as borboletas amarelas tinham alguma coisa que ver com ele. Mauricio Babilônia estava sempre na plateia dos concertos, no cinema, na missa, e ela não necessitava vê-lo para descobri-lo, porque o indicavam as borboletas.
+        `,
+    ]
+
 function cronometro() {
     sec++;
+    secTotal++;
     
     var msgSec = '';
     var msgMin = '';
@@ -27,17 +48,26 @@ function cronometro() {
 }
 
 function comecar() {
+    var textoAleatorio = parseInt(Math.random() * 3);
+
+    clearInterval(funcaoCronometro);
+
     sec = 0;
-    simuladorTexto.style.display = 'block';
+    secTotal = 0;
+    simuladorTexto.innerHTML= textos[textoAleatorio];
     div_msgResultado1.innerHTML = '';
     div_msgResultado2.innerHTML = '';
     funcaoCronometro = setInterval(cronometro, 1000);
 };
 
 function terminar() {
-    clearInterval(funcaoCronometro);
-
-    calcular(sec)
+    if(secTotal < 1) {
+        alert('Primeiro inicie a simulação')
+    } else {
+        clearInterval(funcaoCronometro);
+        
+        calcular(secTotal)
+    }
 };
 
 function calcular(tempo) {
@@ -57,13 +87,13 @@ function calcular(tempo) {
     div_msgResultado1.innerHTML = `
         <h3>Resultado Simulador</h3>
         <p>
-            Você levou ${sec} segundos para ler 100 palavras.
+            Você levou <b>${secTotal}</b> segundos para ler 100 palavras.
         </p>
         <p>
-            Logo, sua velocidade de leitura é de ${(velocidade).toFixed(2)} Palavras por Minuto (PPM).
+            Logo, sua velocidade de leitura é de <b>${(velocidade).toFixed(2)}</b> Palavras por Minuto (PPM).
         </p>
         <p>
-            Lendo apenas 15 minutos por dia, você poderia ler ${parseInt(livrosAno, 0)} livros num ano.
+            Lendo apenas 15 minutos por dia, você poderia ler <b>${parseInt(livrosAno, 0)}</b> livros num ano.
         </p>
         <br>
         <p>
@@ -72,13 +102,13 @@ function calcular(tempo) {
         </p>
         <div class="listinha">
         <p>
-            Conhecer ${parseInt(livrosAno, 0)} novas culturas;
+            Conhecer <b>${parseInt(livrosAno, 0)}</b> novas culturas;
         </p>
         <p>
-            Se tornar especialista em ${(parseInt(livrosAno / 3))} novos assuntos (The Three Book Rule);
+            Se tornar especialista em <b>${(parseInt(livrosAno / 3))}</b> novos assuntos (The Three Book Rule);
         </p>
         <p>
-            Ler ${porcUsuario.toFixed(2)}% a mais que o brasileiro médio.
+            Ler <b>${porcUsuario.toFixed(2)}%</b> a mais que o brasileiro médio.
         </p>
         </div>
     `;
@@ -92,7 +122,7 @@ function calcular(tempo) {
             Uma página comtém 300 palavras e um livro contém 200 páginas.
         </p>
         <p>
-            The Three Book Rule dita que ler 3 livros de um mesmo assunto o torna um especialista, por passar a saber mais que 99% da popução sobre isso.
+            The Three Book Rule dita que ler 3 livros de um mesmo assunto o torna um especialista, por passar a saber mais que 99% da população sobre isso.
         </p>
     `;
 
