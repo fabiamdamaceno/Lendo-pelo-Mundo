@@ -1,7 +1,7 @@
 CREATE DATABASE lendoMundo;
 
 USE lendoMundo;
--- drop database lendoMundo;
+
 CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45),
@@ -13,10 +13,11 @@ CREATE TABLE usuario (
     senha VARCHAR(45) NOT NULL,
     metaAnual INT
 );
-SELECT * FROM usuario;
 
 INSERT INTO usuario (nome, sobrenome, genero, email, senha, metaAnual) VALUES
 	('Fábiam', 'Damaceno da Silva', 'masculino', 'fabiam.damaceno@gmail.com', MD5('L@pis123'), 12);
+    
+SELECT * FROM usuario;
     
 CREATE TABLE leitura (
 	idLeituraUsuario INT PRIMARY KEY AUTO_INCREMENT,
@@ -34,24 +35,35 @@ CREATE TABLE leitura (
     citacaoPreferida VARCHAR(300)
 );
 
-
-    
 INSERT INTO leitura (fkLeituraUsuario_Usuario, titulo, rating, autor, genAutor, paisAutor, genLiterario, dataLeitura, citacaoPreferida) VALUES
-	('1', 'Os Irmãos Karamazov', 5, 'Fyodor Dostoevsky', 'masculino', 'Rússia', 'Romance', '2024-11-27', 'Para o realista, não é a fé que nasce do milagre: é o milagre que nasce da fé. Se o realista passa a ter fé, precisa, em virtude de seu realismo, admitir também o milagre.');
+	('1', 'The Green Mile', 5, 'Stephen King', 'masculino', 'Estados Unidos', 'Suspense', '2023-01-12', ''),
+	('1', 'Alice’s Adventures in Wonderland', 5, 'Lewis Carroll', 'masculino', 'Reino Unido', 'Fantasia', '2024-02-03', ''),
+	('1', 'How to Read a Book', 4.5, 'Mortimer Adler', 'masculino', 'Estados Unidos', 'Técnico', '2023-02-03', ''),
+	('1', 'The Apology of Socrates', 5, 'Plato', 'masculino', 'Grécia', 'Humanidades', '2023-02-04', ''),
+	('1', 'The Murder of Roger Ackroyd', 5, 'Agatha Christie', 'feminino', 'Reino Unido', 'Suspense', '2023-02-07', ''),
+	('1', 'The Cossacks', 5, 'Leo Tolstoy', 'masculino', 'Rússia', 'Romance', '2023-02-13', ''),
+	('1', 'Cuentos de la Selva', 4, 'Horacio Quiroga', 'masculino', 'Uruguai', 'Infantil', '2023-02-16', ''),
+	('1', 'The Screwtape Letters', 5, 'C.S. Lewis', 'masculino', 'Reino Unido', 'Humanidades', '2023-02-19', ''),
+	('1', 'Pride and Prejudice', 4.5, 'Jane Austen', 'feminino', 'Reino Unido', 'Romance Romântico', '2023-03-02', ''),
+	('1', 'The Autobiography of Benjamin Franklin', 4.5, 'Benjamin Franklin', 'masculino', 'Estados Unidos', 'Humanidades', '2023-03-07', ''),
+	('1', 'Harry Potter y la Piedra Filosofal', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-04-27', ''),
+	('1', 'The Brothers Karamazov', 4.5, 'Fyodor Dostoevsky', 'feminino', 'Rússia', 'Fantasia', '2023-05-13', ''),
+	('1', 'Men without Women', 4.5, 'Haruki Murakami', 'masculino', 'Japão', 'Romance', '2023-05-18', ''),
+	('1', 'Harry Potter y la Camara Secreta', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-06-21', ''),
+	('1', 'Harry Potter y el Prisionero de Azkaban', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-07-11', ''),
+	('1', 'Harry Potter y el Cáliz de Fuego', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-07-12', ''),
+	('1', 'The Great Gatsby', 4.5, 'F. Scott Fitzgerald', 'masculino', 'Estados Unidos', 'Romance', '2023-07-15', ''),
+	('1', 'Rita Hayworth and Shawshank Redemption', 5, 'Stephen King', 'masculino', 'Estados Unidos', 'Suspense', '2023-07-27', ''),
+	('1', 'Harry Potter y la Orden del Fénix', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-08-18', ''),
+	('1', 'Harry Potter y el Misterio del Príncipe', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-09-10', ''),
+	('1', 'Harry potter y las Reliquias de la Muerte', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-09-28', ''),
+	('1', 'Frankenstein', 5, 'Mary Shelley', 'feminino', 'Reino Unido', 'Terror', '2023-10-07', ''),
+	('1', 'Steppenwolf', 4, 'Hermann Hesse', 'masculino', 'Alemanha', 'Romance', '2023-10-08', ''),
+	('1', 'The Myth of Sisyphus', 5, 'Albert Camus', 'masculino', 'Argélia', 'Humanidades', '2023-10-09', ''),
+	('1', 'Cego é Aquele que só vê a Bola', 5, ' João Paulo França Streapco', 'masculino', 'Brasil', 'Humanidades', '2023-10-14', ''),
+	('1', 'Cien Años de Soledad', 5, 'Gabriel García Márquez', 'masculino', 'Colômbia', 'Fantasia', '2023-11-02', '');
 
 SELECT * from leitura;
 
 SELECT count(genAutor), genAutor FROM leitura
 	GROUP BY genAutor;
-    
-CREATE TABLE livro (
-	idLivro INT PRIMARY KEY AUTO_INCREMENT,
-    titulo VARCHAR(100),
-    autor VARCHAR(45),
-    paisAutor VARCHAR(45),
-    genero VARCHAR(45),
-    descricao VARCHAR(300)
-);
-
-INSERT INTO livro (titulo, autor, paisAutor, genero, descricao) VALUES
-	('Os Irmãos Karamazov', 'Fyodor Dostoevsky', 'Rússia', 'Romance', 'Os Irmãos Karamazov é um romance de Fiódor Dostoiévski, escrito em 1879, uma das mais importantes obras das literaturas russa e mundial, ou, conforme afirmou Freud: "a maior obra da história".');
