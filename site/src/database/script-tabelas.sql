@@ -34,9 +34,9 @@ CREATE TABLE leitura (
     dataLeitura DATE DEFAULT (CURRENT_DATE),
     citacaoPreferida VARCHAR(300)
 );
-    
+
 INSERT INTO leitura (fkLeituraUsuario_Usuario, titulo, rating, autor, genAutor, paisAutor, genLiterario, dataLeitura, citacaoPreferida) VALUES
-	('1', 'The Green Mile', 5, 'Stephen King', 'masculino', 'Estados Unidos', 'Suspense', '2023-01-12', ''),
+	('1', 'The Green Mile', 5, 'Stephen King', 'masculino', 'Estados Unidos', 'Suspense', '2023-01-12', 'Time takes it all, whether you want it to or not. Time takes it all, time bears it away, and in the end there is only darkness. Sometimes we find others in that darkness, and sometimes we lose them there again'),
 	('1', 'Alice’s Adventures in Wonderland', 5, 'Lewis Carroll', 'masculino', 'Reino Unido', 'Fantasia', '2024-02-03', ''),
 	('1', 'How to Read a Book', 4.5, 'Mortimer Adler', 'masculino', 'Estados Unidos', 'Técnico', '2023-02-03', ''),
 	('1', 'The Apology of Socrates', 5, 'Plato', 'masculino', 'Grécia', 'Humanidades', '2023-02-04', ''),
@@ -47,13 +47,13 @@ INSERT INTO leitura (fkLeituraUsuario_Usuario, titulo, rating, autor, genAutor, 
 	('1', 'Pride and Prejudice', 4.5, 'Jane Austen', 'feminino', 'Reino Unido', 'Romance Romântico', '2023-03-02', ''),
 	('1', 'The Autobiography of Benjamin Franklin', 4.5, 'Benjamin Franklin', 'masculino', 'Estados Unidos', 'Humanidades', '2023-03-07', ''),
 	('1', 'Harry Potter y la Piedra Filosofal', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-04-27', ''),
-	('1', 'The Brothers Karamazov', 4.5, 'Fyodor Dostoevsky', 'feminino', 'Inglaterra', 'Fantasia', '2023-05-13', ''),
-	('1', 'Men without Women', 4.5, 'Haruki Murakami', 'feminino', 'Inglaterra', 'Fantasia', '2023-05-18', ''),
+	('1', 'The Brothers Karamazov', 4.5, 'Fyodor Dostoevsky', 'feminino', 'Rússia', 'Fantasia', '2023-05-13', ''),
+	('1', 'Men without Women', 4.5, 'Haruki Murakami', 'masculino', 'Japão', 'Romance', '2023-05-18', ''),
 	('1', 'Harry Potter y la Camara Secreta', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-06-21', ''),
 	('1', 'Harry Potter y el Prisionero de Azkaban', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-07-11', ''),
 	('1', 'Harry Potter y el Cáliz de Fuego', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-07-12', ''),
 	('1', 'The Great Gatsby', 4.5, 'F. Scott Fitzgerald', 'masculino', 'Estados Unidos', 'Romance', '2023-07-15', ''),
-	('1', 'Rita Hayworth and Shawshank Redemption', 5, 'Stephen King', 'masculino', 'Inglaterra', 'Suspense', '2023-07-27', ''),
+	('1', 'Rita Hayworth and Shawshank Redemption', 5, 'Stephen King', 'masculino', 'Estados Unidos', 'Suspense', '2023-07-27', ''),
 	('1', 'Harry Potter y la Orden del Fénix', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-08-18', ''),
 	('1', 'Harry Potter y el Misterio del Príncipe', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-09-10', ''),
 	('1', 'Harry potter y las Reliquias de la Muerte', 5, 'J.K. Rowling', 'feminino', 'Reino Unido', 'Fantasia', '2023-09-28', ''),

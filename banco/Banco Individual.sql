@@ -36,7 +36,7 @@ CREATE TABLE leitura (
 );
 
 INSERT INTO leitura (fkLeituraUsuario_Usuario, titulo, rating, autor, genAutor, paisAutor, genLiterario, dataLeitura, citacaoPreferida) VALUES
-	('1', 'The Green Mile', 5, 'Stephen King', 'masculino', 'Estados Unidos', 'Suspense', '2023-01-12', ''),
+	('1', 'The Green Mile', 5, 'Stephen King', 'masculino', 'Estados Unidos', 'Suspense', '2023-01-12', 'Time takes it all, whether you want it to or not. Time takes it all, time bears it away, and in the end there is only darkness. Sometimes we find others in that darkness, and sometimes we lose them there again'),
 	('1', 'Alice’s Adventures in Wonderland', 5, 'Lewis Carroll', 'masculino', 'Reino Unido', 'Fantasia', '2024-02-03', ''),
 	('1', 'How to Read a Book', 4.5, 'Mortimer Adler', 'masculino', 'Estados Unidos', 'Técnico', '2023-02-03', ''),
 	('1', 'The Apology of Socrates', 5, 'Plato', 'masculino', 'Grécia', 'Humanidades', '2023-02-04', ''),
