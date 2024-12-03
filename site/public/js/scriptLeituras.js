@@ -69,7 +69,7 @@ function verCitacao(ID) {
 
 function adicionarLeitura() {
     var titulo = ipt_titulo.value;
-    var rating = Number(ipt_rating.value);
+    // var rating = Number(ipt_rating.value);
     var autor = ipt_autor.value;
     var genAutor = ipt_genAutor.value;
     var pais = ipt_pais.value;
@@ -90,7 +90,6 @@ function adicionarLeitura() {
     } else if(data == undefined) {
         alert('Insira a data');
     } else {
-        alert('oi')
 
     fetch(`/leituras/cadastrar/${idUsuario}`, {
         method: "POST",
@@ -99,7 +98,6 @@ function adicionarLeitura() {
         },
         body: JSON.stringify({
             tituloServer: titulo,
-            ratingServer: rating,
             autorServer: autor,
             genAutorServer: genAutor,
             paisServer: pais,

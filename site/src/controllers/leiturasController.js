@@ -15,8 +15,6 @@ function cadastrar(req, res) {
     // Faça as validações dos valores
     if (titulo == undefined) {
         res.status(400).send("Seu titulo está indefinido!");
-    } else if (rating == undefined) {
-        res.status(400).send("Seu rating está indefinido!");
     } else if (autor == undefined) {
         res.status(400).send("Seu autor está indefinido!");
     } else if (genAutor == undefined) {
@@ -32,7 +30,7 @@ function cadastrar(req, res) {
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo leiturasModel.js
-        leiturasModel.cadastrar(idUsuario, titulo, rating, autor, genAutor, pais, genLiterario, data, citacaoPreferida)
+        leiturasModel.cadastrar(idUsuario, titulo, autor, genAutor, pais, genLiterario, data, citacaoPreferida)
             .then(
                 function (resultado) {
                     res.json(resultado);
