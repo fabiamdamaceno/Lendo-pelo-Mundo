@@ -1,9 +1,36 @@
 
 // Modificar textos
 var ODSLista = [
-    'TEXTO LOREM: O São Paulo Futebol Clube, fundado em 1930, é um dos maiores clubes do Brasil e reconhecido internacionalmente. Com 3 títulos da Libertadores e 3 Mundiais, é símbolo de tradição e conquistas. O Tricolor Paulista tem como casa o Estádio do Morumbi, palco de grandes momentos. Ídolos como Rogério Ceni, Raí e Telê Santana marcaram a história do clube',
-    'TEXTO LOREM: A Sociedade Esportiva Palmeiras, criada em 1914, é conhecida como o Verdão ou Alviverde Imponente. Com 3 Libertadores e 11 Brasileiros, é o maior campeão nacional. Sua arena, o Allianz Parque, é referência em modernidade. Jogadores lendários como Ademir da Guia e Marcos fazem parte da rica trajetória do clube.',
-    'TEXTO LOREM: O Sport Club Corinthians Paulista, fundado em 1910, é um dos clubes mais populares do Brasil. Com 2 títulos mundiais, 1 Libertadores e 7 Brasileiros, o Timão tem uma história marcada por superação e paixão. Seu estádio, a Neo Química Arena, é o caldeirão de sua fiel torcida. Nomes como Sócrates e Marcelinho Carioca são eternos na memória corinthiana.'
+    `
+        <p>
+            Vivemos numa rotina cada vez mais acelerada e somos bombardeados a todo momento com fluxos de informação. Essa situação exaure o nosso cérebro devido a alta atividade que deve estar todo mundo exercendo para por acompanhar o ritmo. Não atoa vemos hoje uma quantidade cada vez maior de transtornos mentais, em diversidade e em quantidade.
+        </p>
+        <p>
+            Assim, a leitura é um remédio para isso. Ter que se desacelerar para poder ler um livro, relaxa os focos de informação cerebrais que estão exaustos e exerce outra partes do cérebro que no nosso dia-a-dia não são tão utilizados. Assim, comprovadamente, reduzindo a ansiedade. Além de ajudar o leitor a entender o mundo e a si mesmo, como me ajudou e melhorar consideravelmente a saúde mental.
+        </p>
+        <p>
+            Assim, a promoção dessa atividade colabora com esse ODS.
+        </p>
+    `,
+    `
+        <p>
+            A educação é realizada por diversos meios, através de livros, experiências práticas, aulas de professores e apostilas. E a complementaridade desses meios, evidentemente, trabalha melhor para o aprendizado.
+        </p>
+        <p>
+            De qualquer maneira, para uma pessoa que não possua os meios de adquirir uma educação formal ou uma educação formal completa e abrangente, os livros são a melhor maneira de ultrapassar essa maneira, uma vez que essa pessoa já tenha sido alfabetizada. Isso por que no mundo digitalizado em que vivemos o custo de acesso a livros reduziu drasticamente ou tornou-se gratuito quando levamos em conta projetos como o Projeto Gutenberg, que cataloga e disponibiliza livros que perderam a validade da proteção da Propriedade Intelectual.
+        </p>
+        <p>
+            Assim, o projeto trazer a importância da leitura, colabora com essa meta da ONU.
+        </p>
+    `,
+    `
+        <p>
+            A desigualdade de gênero é uma complexa e completa estrutura. Ela possui diversas sintomas sociais na civilização em que que vivemos, desde de leis e regramentos distintos para os gêneros, resultados econômicos díspares e frustrantes projetos de vida moldados por essa estrutura. Além disso, ela é composta por diversas ferramentas - que inclusive se retroalimentam - as quais impõem a desigualdade. Entretanto, toda essa árvore de complexidade dessa estrutura, acredito eu, possuí uma raiz: a narrativa.
+        </p>
+        <p>
+            As narrativas não só contam como a realidade é, mas principalmente possuem um papel definidor do que é a realidade. Segundo a teoria linguística de Sapir-Whorf, as palavras que usamos ditam como pensamos. Assim, debater a causa, valorizar e aumentar a visibilidade de livros escritos por mulheres, ou seja, emponderar as mulheres e as suas visões de mundo é o passo primordial para vencer a desigualdade.
+        </p>
+    `,
 ];
 
 var livroLista = [
