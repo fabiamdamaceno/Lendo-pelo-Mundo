@@ -76,20 +76,21 @@ function adicionarLeitura() {
     var genLiterario = ipt_genLiterario.value;
     var data = ipt_data.value;
     var citacaoPreferida = ipt_citacaoPreferida.value;
-
+    
     if(genAutor == '#') {
-        alert('Insira o Gênero do autor')
-    } else if(titulo == '') {
-        alert('Insira o titulo')
-    } else if(autor == '') {
-        alert('Insira o autor')
-    } else if(pais == '') {
-        alert('Insira o país')
-    } else if(genLiterario == '') {
-        alert('Insira o Genêro Literário')
-    } else if(data == '') {
-        alert('Insira a data')
+        alert('Insira o Gênero do autor');
+    } else if(titulo == undefined) {
+        alert('Insira o titulo');
+    } else if(autor == undefined) {
+        alert('Insira o autor');
+    } else if(pais == undefined) {
+        alert('Insira o país');
+    } else if(genLiterario == undefined) {
+        alert('Insira o Genêro Literário');
+    } else if(data == undefined) {
+        alert('Insira a data');
     } else {
+        alert('oi')
 
     fetch(`/leituras/cadastrar/${idUsuario}`, {
         method: "POST",
